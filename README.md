@@ -1,2 +1,16 @@
-# learn-python-daily
-A structured day-by-day record of my Python learning journey.  This repository contains: - 📘 Python concepts - 💻 Code examples - 📝 Notes - 🎯 Practice exercises - 🚀 Mini projects  Goal: Build a strong Python foundation for Data Analytics, Artificial Intelligence, and Software Development.
+### 1. What is Python?
+- Python is a high-level, interpreted programming language.
+- It is easy to read and write.
+- Python is widely used in:
+  - Data Analysis
+  - Artificial Intelligence
+  - Machine Learning
+  - Web Development
+  - Automation
+  - Scripting
+
+### 2. Development Environment Setup
+- Installed Visual Studio Code (VS Code).
+- Installed Python Extension for VS Code.
+- Configured the Codex AI Agent extension.
+- Verified that the Python development environment is ready.
