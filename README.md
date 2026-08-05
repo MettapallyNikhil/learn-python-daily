@@ -15,7 +15,7 @@
 - Configured the Codex AI Agent extension.
 - Verified that the Python development environment is ready.
 
-# Day 02 - Python Execution Modes
+# Python Execution Modes
 
 ### Different Ways to Execute Python Programs
 
@@ -36,3 +36,44 @@
 #### 4. PyCharm IDE
 - A professional Python IDE.
 - Provides features like debugging, auto-completion, and project management.
+
+### 1. Comments in Python
+
+Comments are used to explain the code and make it easier to understand. Python ignores comments during program execution.
+
+#### Single-line Comment
+```python
+# This is a single-line comment
+print("Hello, World!")
+```
+
+#### Multi-line Comment
+```python
+"""
+This is a multi-line comment.
+It can span multiple lines.
+"""
+print("Python")
+```
+
+### 2. Keywords in Python
+
+Keywords are reserved words that have a predefined meaning in Python. They cannot be used as variable names, function names, or identifiers.
+Some commonly used Python keywords are:
+ if
+- else
+- elif
+- for
+- while
+- break
+- continue
+- def
+- return
+- class
+- try
+- except
+- import
+- True
+- False
+- None
+
