@@ -172,3 +172,139 @@ for
 ```
 
 ---
+### 1. Data Types in Python
+
+A data type specifies the type of value a variable can store.
+
+#### Integer (`int`)
+
+Stores whole numbers without decimal points.
+
+```python
+age = 24
+print(age)
+print(type(age))
+```
+
+**Output:**
+
+```
+24
+<class 'int'>
+```
+
+---
+
+#### Float (`float`)
+
+Stores decimal numbers.
+
+```python
+price = 99.99
+print(price)
+print(type(price))
+```
+
+**Output:**
+
+```
+99.99
+<class 'float'>
+```
+
+---
+
+#### Boolean (`bool`)
+
+Stores one of two values: `True` or `False`.
+
+```python
+is_student = True
+print(is_student)
+print(type(is_student))
+```
+
+**Output:**
+
+```
+True
+<class 'bool'>
+```
+
+---
+
+### 2. Type Casting
+
+Type casting is the process of converting one data type into another.
+
+#### Integer to Float
+
+```python
+num = 10
+result = float(num)
+
+print(result)
+print(type(result))
+```
+
+**Output:**
+
+```
+10.0
+<class 'float'>
+```
+
+---
+
+#### Float to Integer
+
+```python
+price = 15.8
+result = int(price)
+
+print(result)
+print(type(result))
+```
+
+**Output:**
+
+```
+15
+<class 'int'>
+```
+
+> **Note:** Converting a float to an integer removes the decimal part; it does not round the number.
+
+---
+
+#### Integer to Boolean
+
+```python
+print(bool(1))
+print(bool(0))
+```
+
+**Output:**
+
+```
+True
+False
+```
+
+---
+
+#### Boolean to Integer
+
+```python
+print(int(True))
+print(int(False))
+```
+
+**Output:**
+
+```
+1
+0
+```
+
+---
