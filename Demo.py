@@ -41,3 +41,21 @@ print(type(n))
 a=b=c=10
 print(a,b,c)
 print(a,b,c, sep=',')
+
+#Datatypes
+#Type casting - converting one datatype to another datatype
+input('enter Input number:')
+print(type(a))
+input('enter Input number:')
+print(type(b))
+c = a+b
+print('The result is:', c)
+
+a = int(input('enter Input number:'))
+print(type(a))
+
+b = int(input('enter Input number:'))
+print(type(b))
+
+c = a + b
+print('The result is:', c)
