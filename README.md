@@ -308,3 +308,17 @@ print(int(False))
 ```
 
 ---
+
+### 1. Complex Data Type
+
+Python supports complex numbers as a built-in data type.
+
+A complex number consists of:
+
+- A real part
+- An imaginary part
+
+The general form is:
+
+```text
+a + bj
