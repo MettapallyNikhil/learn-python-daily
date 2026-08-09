@@ -322,3 +322,70 @@ The general form is:
 
 ```text
 a + bj
+
+### 1. Sequence Data Types
+
+Sequence data types are used to store multiple values in an ordered collection.
+
+Python provides several sequence data types, including:
+
+- String (`str`)
+- List (`list`)
+- Tuple (`tuple`)
+- Range (`range`)
+
+### 2. String
+
+A string is a sequence of characters.
+
+```python
+name = "Python"
+
+print(name)
+print(name[0])
+```
+
+Output:
+
+```text
+Python
+P
+```
+
+### 3. List
+
+A list is an ordered collection of values. Lists are **mutable**, which means their values can be changed.
+
+```python
+numbers = [10, 20, 30, 40]
+
+print(numbers)
+print(numbers[0])
+```
+
+### 4. Tuple
+
+A tuple is an ordered collection of values. Tuples are **immutable**, which means their values cannot be changed after creation.
+
+```python
+numbers = (10, 20, 30, 40)
+
+print(numbers)
+print(numbers[0])
+```
+
+### 5. Range
+
+`range()` represents a sequence of numbers, commonly used with loops.
+
+```python
+numbers = range(1, 6)
+
+print(list(numbers))
+```
+
+Output:
+
+```text
+[1, 2, 3, 4, 5]
+```
