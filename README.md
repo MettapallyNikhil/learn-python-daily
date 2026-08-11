@@ -615,3 +615,113 @@ dir(range)
 ```
 
 ---
+
+Operators in Python.
+
+An operator is a symbol or keyword that performs an operation on one or more operands (values or variables).
+
+Example concept:
+
+```text
+Operand  Operator  Operand
+   10        +        20
+```
+
+Here:
+
+- `10` and `20` are operands.
+- `+` is the operator.
+
+---
+
+# 1. Arithmetic Operators
+
+Arithmetic operators are used to perform mathematical operations on numeric values.
+
+| Operator | Name | Description |
+|----------|------|-------------|
+| `+` | Addition | Adds two values |
+| `-` | Subtraction | Subtracts one value from another |
+| `*` | Multiplication | Multiplies two values |
+| `/` | Division | Divides one value by another and returns a float |
+| `%` | Modulus | Returns the remainder after division |
+| `**` | Exponentiation | Raises one value to the power of another |
+| `//` | Floor Division | Performs division and returns the floor value |
+
+### Arithmetic Operators
+
+```text
++    Addition
+-    Subtraction
+*    Multiplication
+/    Division
+%    Modulus
+**   Exponentiation
+//   Floor Division
+```
+
+---
+
+# 2. Relational (Comparison) Operators
+
+Relational operators, also called comparison operators, are used to compare two values.
+
+The result of a comparison is a Boolean value:
+
+```text
+True
+```
+
+or
+
+```text
+False
+```
+
+| Operator | Name |
+|----------|------|
+| `<` | Less than |
+| `>` | Greater than |
+| `<=` | Less than or equal to |
+| `>=` | Greater than or equal to |
+| `==` | Equal to |
+| `!=` | Not equal to |
+
+### Important Note
+
+`=` and `==` have different purposes.
+
+- `=` is an **assignment operator**.
+- `==` is a **comparison operator** used to check whether two values are equal.
+
+---
+
+# 3. Assignment Operators
+
+Assignment operators are used to assign values to variables.
+
+| Operator | Name | Meaning |
+|----------|------|---------|
+| `=` | Assignment | Assign a value |
+| `+=` | Add and assign | Add a value and assign the result |
+| `-=` | Subtract and assign | Subtract a value and assign the result |
+| `*=` | Multiply and assign | Multiply by a value and assign the result |
+| `/=` | Divide and assign | Divide by a value and assign the result |
+| `%=` | Modulus and assign | Calculate the remainder and assign the result |
+| `**=` | Power and assign | Raise to a power and assign the result |
+| `//=` | Floor division and assign | Perform floor division and assign the result |
+
+### Assignment Operators
+
+```text
+=      Assign
++=     Add and assign
+-=     Subtract and assign
+*=     Multiply and assign
+/=     Divide and assign
+%=     Modulus and assign
+**=    Power and assign
+//=    Floor division and assign
+```
+
+---
