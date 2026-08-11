@@ -1,11 +1,34 @@
-d = {1:'one', 2:'two', 3:'three'}
-print(d)
-print(type(d))  # This will print <class 'dict'> because d is a dictionary
+a= 3
+b= 4
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a%b)
+print(a**b)
+print(a//b)
 
-d = {1:'one', 1:'two', 3:'three'}
-print(d)
-print(type(d))  # This will print <class 'dict'> because d is a dictionary
+a = 5
+print(a)
 
-r = range(500) # we can mention start and stop value
-print(list(r)) 
-print(type(r))  # This will print <class 'range'> because r is a range object
+a+= 2
+print(a)
+
+a-= 1
+print(a)
+
+a*= 3
+print(a)
+
+a/= 2
+print(a)
+
+a%= 3
+print(a)
+
+a**= 2
+print(a)
+
+a//= 2
+print(a)
+# it will execute line by line and print the output of each operation.
