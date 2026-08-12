@@ -723,3 +723,174 @@ Assignment operators are used to assign values to variables.
 ```
 
 ---
+
+---
+
+# 4. Logical Operators
+
+Logical operators are used to combine or modify conditions.
+
+They return Boolean results (`True` or `False`).
+
+| Operator | Description |
+|----------|-------------|
+| `and` | Returns `True` if both conditions are `True` |
+| `or` | Returns `True` if at least one condition is `True` |
+| `not` | Reverses the Boolean result |
+
+### `and`
+
+Returns `True` only when both conditions are `True`.
+
+### `or`
+
+Returns `True` when at least one of the conditions is `True`.
+
+### `not`
+
+Reverses the result of a condition.
+
+---
+
+# 5. Membership Operators
+
+Membership operators are used to check whether a value exists in a collection or sequence.
+
+They can commonly be used with:
+
+- Strings
+- Lists
+- Tuples
+- Sets
+- Dictionaries
+
+| Operator | Description |
+|----------|-------------|
+| `in` | Returns `True` if the specified value is present |
+| `not in` | Returns `True` if the specified value is not present |
+
+### `in`
+
+Checks whether a value exists in a collection.
+
+### `not in`
+
+Checks whether a value does not exist in a collection.
+
+---
+
+# 6. Identity Operators
+
+Identity operators are used to determine whether two variables refer to the **same object**.
+
+| Operator | Description |
+|----------|-------------|
+| `is` | Returns `True` if both variables refer to the same object |
+| `is not` | Returns `True` if both variables do not refer to the same object |
+
+### Important Difference: `is` vs `==`
+
+These operators should not be confused.
+
+- `==` checks whether two objects have equal values.
+- `is` checks whether two variables refer to the same object.
+
+```text
+==  → Equality
+is  → Identity
+```
+
+---
+
+# 7. `id()` Function
+
+`id()` is a built-in Python function used to obtain the unique identity of an object.
+
+It returns an integer that identifies the object during its lifetime.
+
+The identity can be used to investigate whether two variables refer to the same object.
+
+### Important Note
+
+The exact meaning of the returned integer depends on the Python implementation.
+
+In CPython, the value returned by `id()` commonly corresponds to the object's memory address.
+
+---
+
+# 8. Bitwise Operators
+
+Bitwise operators perform operations at the individual **bit level** of integer values.
+
+They operate on the binary representation of numbers.
+
+| Operator | Name | Description |
+|----------|------|-------------|
+| `&` | Bitwise AND | Performs AND operation on corresponding bits |
+| `|` | Bitwise OR | Performs OR operation on corresponding bits |
+| `^` | Bitwise XOR | Performs exclusive OR operation on corresponding bits |
+| `~` | Bitwise NOT | Inverts the bits of an integer |
+| `<<` | Left Shift | Shifts bits to the left |
+| `>>` | Right Shift | Shifts bits to the right |
+
+### `&` — Bitwise AND
+
+A bit becomes `1` only when both corresponding bits are `1`.
+
+### `|` — Bitwise OR
+
+A bit becomes `1` when at least one corresponding bit is `1`.
+
+### `^` — Bitwise XOR
+
+A bit becomes `1` when the corresponding bits are different.
+
+### `~` — Bitwise NOT
+
+Inverts the bits of an integer.
+
+### `<<` — Left Shift
+
+Shifts the bits to the left by the specified number of positions.
+
+### `>>` — Right Shift
+
+Shifts the bits to the right by the specified number of positions.
+
+---
+
+# 📊 Complete Python Operators Overview
+
+| Category | Operators |
+|----------|-----------|
+| Arithmetic | `+`, `-`, `*`, `/`, `%`, `**`, `//` |
+| Comparison / Relational | `<`, `>`, `<=`, `>=`, `==`, `!=` |
+| Assignment | `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `**=`, `//=` |
+| Logical | `and`, `or`, `not` |
+| Membership | `in`, `not in` |
+| Identity | `is`, `is not` |
+| Bitwise | `&`, `|`, `^`, `~`, `<<`, `>>` |
+
+---
+
+# 📌 Operator Categories
+
+```text
+Arithmetic
+    ↓
+Comparison / Relational
+    ↓
+Assignment
+    ↓
+Logical
+    ↓
+Membership
+    ↓
+Identity
+    ↓
+Bitwise
+```
+
+---
+
+<img width="680" height="386" alt="image" src="https://github.com/user-attachments/assets/b9710c57-d67e-4567-807b-56c5acabd15f" />
