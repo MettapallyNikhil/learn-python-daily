@@ -1,34 +1,25 @@
-a= 3
-b= 4
-print(a+b)
-print(a-b)
-print(a*b)
-print(a/b)
-print(a%b)
-print(a**b)
-print(a//b)
+print(3<4 and 3<4)
+print(3<4 or 3<2)
+print(not (3<2))
 
-a = 5
-print(a)
+n = (10,20,30,40,50)
+print(10 in n)
+print(10 not in n)
 
-a+= 2
-print(a)
+a= 2
+b= 2
+print(a is not b)
+print(a is b)
+print(id(a))
+print(id(b))
 
-a-= 1
-print(a)
-
-a*= 3
-print(a)
-
-a/= 2
-print(a)
-
-a%= 3
-print(a)
-
-a**= 2
-print(a)
-
-a//= 2
-print(a)
-# it will execute line by line and print the output of each operation.
+a=12
+b=9
+print(bin(a))
+print(bin(b))
+print(a&b)
+print(a|b)
+print(a^b)
+print(~a)
+print(a<<1)
+print(a>>1)
