@@ -827,7 +827,7 @@ They operate on the binary representation of numbers.
 | Operator | Name | Description |
 |----------|------|-------------|
 | `&` | Bitwise AND | Performs AND operation on corresponding bits |
-| `|` | Bitwise OR | Performs OR operation on corresponding bits |
+| `\|` | Bitwise OR | Performs OR operation on corresponding bits |
 | `^` | Bitwise XOR | Performs exclusive OR operation on corresponding bits |
 | `~` | Bitwise NOT | Inverts the bits of an integer |
 | `<<` | Left Shift | Shifts bits to the left |
