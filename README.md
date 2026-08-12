@@ -306,7 +306,7 @@ print(int(False))
 1
 0
 ```
-
+<img width="1182" height="626" alt="image" src="https://github.com/user-attachments/assets/e18ddcef-30d9-4c68-82d8-4585f819efb4" />
 ---
 
 ### 1. Complex Data Type
@@ -321,11 +321,9 @@ A complex number consists of:
 The general form is:
 
 ```text
+
 a + bj
 ---
-
-<img width="1182" height="626" alt="image" src="https://github.com/user-attachments/assets/e18ddcef-30d9-4c68-82d8-4585f819efb4" />
-
 
 # 1. Sequence Data Types
 
