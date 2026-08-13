@@ -894,3 +894,58 @@ Bitwise
 ---
 
 <img width="680" height="386" alt="image" src="https://github.com/user-attachments/assets/b9710c57-d67e-4567-807b-56c5acabd15f" />
+
+📚 Conditional Statements
+
+Conditional statements are used to make decisions in a Python program based on whether a condition is True or False.
+Python provides the following conditional structures:
+•	if
+•	if-else
+•	elif
+•	Nested if
+
+
+1. if Statement
+The if statement executes a block of code only when the given condition is True.
+Syntax
+if condition:
+    statement
+
+
+2. if-else Statement
+The if-else statement provides two possible execution paths. If the condition is True, the if block is executed; otherwise, the else block is executed.
+Syntax
+if condition:
+    statement
+else:
+    statement
+
+
+3. elif Statement
+The elif statement is the short form of else if. It is used to check additional conditions when the previous if or elif condition is False.
+Syntax
+if condition1:
+    statement
+elif condition2:
+    statement
+else:
+    statement
+
+4. Nested if Statement
+A nested if statement means placing an if statement inside another if or else block. It is used to test another condition depending on the result of the first condition.
+Syntax
+if condition1:
+    if condition2:
+        statement
+    else:
+        statement
+else:
+    statement
+
+
+Conditional Statement	Purpose
+if	Executes a block when a condition is True.
+if-else	Chooses between two possible outcomes.
+elif	Checks additional conditions.
+Nested if	Checks a condition inside another conditional block.
+
