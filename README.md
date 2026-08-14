@@ -945,7 +945,55 @@ else:
 
 Conditional Statement	Purpose
 if	Executes a block when a condition is True.
+
+# Day 11 - Iterative Statements in Python
+
+## 📚 Iterative Statements
+
+Iterative statements are used to execute a block of code repeatedly.
+
+The iterative statements covered today are:
+
+- `for` loop
+- Nested `for` loop
+- `while` loop
+
+---
+
+## 1. `for` Loop
+
+The `for` loop is used to iterate through the elements of a collection one by one, in the order in which they appear.
+
+### Syntax
+
+```python
+for variable in collection:
+    statement
 if-else	Chooses between two possible outcomes.
 elif	Checks additional conditions.
 Nested if	Checks a condition inside another conditional block.
+```
 
+## 2. Nested `for` Loop
+
+A nested for loop is a for loop that contains another for loop inside it.
+
+### Syntax
+```python
+for outer_variable in collection:
+    for inner_variable in collection:
+        statement
+```
+
+How It Works:
+
+For every iteration of the outer loop, the inner loop completes all of its iterations.
+Only after the inner loop has completed all its iterations does the outer loop move to its next iteration.
+
+## 3. `while` Loop
+
+The while loop is used to repeatedly execute a block of code as long as a given condition is True.
+```python
+while condition:
+    statement
+```
