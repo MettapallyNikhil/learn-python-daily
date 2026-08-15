@@ -997,3 +997,51 @@ The while loop is used to repeatedly execute a block of code as long as a given 
 while condition:
     statement
 ```
+
+## 📚 Transfer Statements
+
+Transfer statements are used to alter the normal flow of execution within a program, especially inside loops.
+
+The transfer statements covered today are:
+
+- `break`
+- `continue`
+- `pass`
+
+---
+
+## 1. `break` Statement
+
+The `break` statement is used to stop the execution of a loop when a specified condition is met.
+
+When `break` is executed, the loop terminates immediately and program execution continues with the statement after the loop.
+
+### Purpose
+
+- To stop loop execution based on a condition.
+- To exit a loop before all iterations are completed.
+
+### Syntax
+
+```python
+break
+```
+## 2. `continue` Statement
+
+The continue statement is used to skip the current iteration of a loop and continue with the next iteration.
+
+### Syntax
+
+```python
+continue
+```
+
+## 3. `pass` Statement
+
+The `pass` statement is used when a block of code needs to be left empty.
+
+### Syntax
+
+```python
+pass
+```
