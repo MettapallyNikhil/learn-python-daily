@@ -14,7 +14,7 @@
 # uses - 2d concepts, rows and columns, limited interation we use for loop
 # while - unlimited iterations, till the condition is false it keeps on executing
 
-# Trasfer statements
-# Break
-# continue
-# pass
+# Transfer statements
+# Break - used to stop the iterations based on conditions
+# continue - skip the current iteration, and continue with next iteration
+# pass - to leave the block the code as empty, we need pass
