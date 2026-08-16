@@ -1,0 +1,31 @@
+import sys
+sys.set_int_max_str_digits(0)
+
+# Basics - input() int() float() str bool comparison == if-else variables type()
+name = input("Enter Name: ")
+print(type(name))
+
+Age = int(input("Enter your Age: "))
+print(type(Age))
+
+Height = float(input("Enter in Numbers(Cms): "))
+print(type(Height))
+
+Learning_Python = input("Are you learning Python?True/False: ")
+if Learning_Python == "True":
+    Learning_Python = True
+else:
+    Learning_Python = False
+print(Learning_Python)
+print(type(Learning_Python))
+
+# Arithmetic Operators - addition subtraction multiplication division remainder (%) power (**) floor division (//)
+a = int(input("Enter any Number: "))
+b = int(input("Enter any Number: "))
+print("Addition:", a+b)
+print("Subtraction:",a-b)
+print("Multiplication:",a*b)
+print("Division:",a/b)
+print("Remainder:",a%b)
+print("Power:",a**b)
+print("Floor Division:",a//b)
