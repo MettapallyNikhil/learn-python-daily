@@ -46,8 +46,6 @@ The logical operators practiced are:
 - `or`
 - `not`
 
----
-
 # Practice Code
 
 age = int(input("Enter Age: "))
