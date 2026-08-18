@@ -48,7 +48,7 @@ The logical operators practiced are:
 
 ---
 
-## Practice Code
+# Practice Code
 
 age = int(input("Enter Age: "))
 print(age, type)
