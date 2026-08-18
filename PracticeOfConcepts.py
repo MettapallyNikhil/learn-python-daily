@@ -1,58 +1,72 @@
-import sys
-sys.set_int_max_str_digits(0)
+# import sys
+# sys.set_int_max_str_digits(0)
 
-# Basics - input() int() float() str bool comparison == if-else variables type()
-name = input("Enter Name: ")
-print(type(name))
+# # Basics - input() int() float() str bool comparison == if-else variables type()
+# name = input("Enter Name: ")
+# print(type(name))
 
-Age = int(input("Enter your Age: "))
-print(type(Age))
+# Age = int(input("Enter your Age: "))
+# print(type(Age))
 
-Height = float(input("Enter in Numbers(Cms): "))
-print(type(Height))
+# Height = float(input("Enter in Numbers(Cms): "))
+# print(type(Height))
 
-Learning_Python = input("Are you learning Python?True/False: ")
-if Learning_Python == "True":
-    Learning_Python = True
+# Learning_Python = input("Are you learning Python?True/False: ")
+# if Learning_Python == "True":
+#     Learning_Python = True
+# else:
+#     Learning_Python = False
+# print(Learning_Python)
+# print(type(Learning_Python))
+
+# # Arithmetic Operators - addition subtraction multiplication division remainder (%) power (**) floor division (//)
+# a = int(input("Enter any Number: "))
+# b = int(input("Enter any Number: "))
+# print("Addition:", a+b)
+# print("Subtraction:",a-b)
+# print("Multiplication:",a*b)
+# print("Division:",a/b)
+# print("Remainder:",a%b)
+# print("Power:",a**b)
+# print("Floor Division:",a//b)
+
+# # Comparison Operators
+# a = int(input("Enter any Number: "))
+# b = int(input("Enter any Number: "))
+
+# print(a>b)
+# print(a<b)
+# print(a==b)
+# print(a!=b)
+
+# # Assignment Operators
+# a = 10
+
+# a += 5
+# print(a)
+# a -= 5
+# print(a)
+# a *= 5
+# print(a)
+# a /= 5
+# print(a)
+# a %= 5
+# print(a)
+# a **= 5
+# print(a)
+# a //= 5
+# print(a)
+
+# Logical Operators
+age = int(input("Enter Age: "))
+print(age, type)
+has_id = input("Do you have Valid ID? True/False: ")
+if has_id == "True":
+    has_id = True
 else:
-    Learning_Python = False
-print(Learning_Python)
-print(type(Learning_Python))
+    has_id = False
 
-# Arithmetic Operators - addition subtraction multiplication division remainder (%) power (**) floor division (//)
-a = int(input("Enter any Number: "))
-b = int(input("Enter any Number: "))
-print("Addition:", a+b)
-print("Subtraction:",a-b)
-print("Multiplication:",a*b)
-print("Division:",a/b)
-print("Remainder:",a%b)
-print("Power:",a**b)
-print("Floor Division:",a//b)
-
-# Comparison Operators
-a = int(input("Enter any Number: "))
-b = int(input("Enter any Number: "))
-
-print(a>b)
-print(a<b)
-print(a==b)
-print(a!=b)
-
-# Assignment Operators
-a = 10
-
-a += 5
-print(a)
-a -= 5
-print(a)
-a *= 5
-print(a)
-a /= 5
-print(a)
-a %= 5
-print(a)
-a **= 5
-print(a)
-a //= 5
-print(a)
+print(age >= 18 and has_id)
+print(type(age))
+print(age < 18 or not has_id)
+print(type(age))
