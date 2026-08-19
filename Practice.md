@@ -63,3 +63,26 @@ print(type(age))
 
 print(age < 18 or not has_id)
 print(type(age))
+
+
+## Membership Operators
+
+Membership operators are used to check whether a value is present in a sequence or collection.
+
+The membership operators practiced are:
+
+- `in`
+- `not in`
+
+---
+
+# Membership Operators
+
+fruits = ["apple", "banana", "orange", "mango", "grape"]
+
+A = input("Enter Fruit1: ")
+
+print(A)
+print(A in fruits)
+print(A not in fruits)
+
