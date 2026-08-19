@@ -58,15 +58,22 @@
 # print(a)
 
 # Logical Operators
-age = int(input("Enter Age: "))
-print(age, type)
-has_id = input("Do you have Valid ID? True/False: ")
-if has_id == "True":
-    has_id = True
-else:
-    has_id = False
+# age = int(input("Enter Age: "))
+# print(age, type)
+# has_id = input("Do you have Valid ID? True/False: ")
+# if has_id == "True":
+#     has_id = True
+# else:
+#     has_id = False
 
-print(age >= 18 and has_id)
-print(type(age))
-print(age < 18 or not has_id)
-print(type(age))
+# print(age >= 18 and has_id)
+# print(type(age))
+# print(age < 18 or not has_id)
+# print(type(age))
+
+# in and not in
+fruits = ["apple", "banana", "orange", "mango", "grape"]
+A = input("Enter Fruit1: ")
+print(A)
+print(A in fruits)
+print(A not in fruits)
