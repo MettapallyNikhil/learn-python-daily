@@ -111,9 +111,15 @@ a = input("Are you a student? True/False: ")
 b = input("Do you have a student ID? True/False: ")
 
 if a == "True":
+
     if b == "True":
+    
         print("Student access granted")
+        
     else:
+    
         print("Please show your student ID")
+        
 else:
+
     print("Regular access")
