@@ -72,8 +72,31 @@
 # print(type(age))
 
 # in and not in
-fruits = ["apple", "banana", "orange", "mango", "grape"]
-A = input("Enter Fruit1: ")
-print(A)
-print(A in fruits)
-print(A not in fruits)
+# fruits = ["apple", "banana", "orange", "mango", "grape"]
+# A = input("Enter Fruit1: ")
+# print(A)
+# print(A in fruits)
+# print(A not in fruits)
+
+# if / elif / else
+score = int(input("Enter your Score: "))
+if  score >= 90:
+    print("Excellent")
+elif score >= 70:
+    print("Good")
+elif score >= 50:
+    print("Pass")
+else:
+    print("Fail")
+
+# Nested if
+a = input("Are you a student? True/False: ")
+b = input("Do you have a student ID? True/False: ")
+if a == "True":
+    if b == "True":
+        print("Student access granted")
+    else:
+        print("Please show your student ID")
+else:
+    print("Regular access")
+    
