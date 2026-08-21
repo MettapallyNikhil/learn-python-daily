@@ -39,7 +39,7 @@
 # print(a==b)
 # print(a!=b)
 
-# # Assignment Operators
+# Assignment Operators
 # a = 10
 
 # a += 5
@@ -79,24 +79,32 @@
 # print(A not in fruits)
 
 # if / elif / else
-score = int(input("Enter your Score: "))
-if  score >= 90:
-    print("Excellent")
-elif score >= 70:
-    print("Good")
-elif score >= 50:
-    print("Pass")
-else:
-    print("Fail")
+# score = int(input("Enter your Score: "))
+# if  score >= 90:
+#     print("Excellent")
+# elif score >= 70:
+#     print("Good")
+# elif score >= 50:
+#     print("Pass")
+# else:
+#     print("Fail")
 
-# Nested if
-a = input("Are you a student? True/False: ")
-b = input("Do you have a student ID? True/False: ")
-if a == "True":
-    if b == "True":
-        print("Student access granted")
-    else:
-        print("Please show your student ID")
-else:
-    print("Regular access")
-    
+# # Nested if
+# a = input("Are you a student? True/False: ")
+# b = input("Do you have a student ID? True/False: ")
+# if a == "True":
+#     if b == "True":
+#         print("Student access granted")
+#     else:
+#         print("Please show your student ID")
+# else:
+#     print("Regular access")
+
+# for loop
+for i in range(1,11):
+    print(i)
+
+# for loop + condition
+for i in range(1,11):
+   if i % 2 == 0:
+        print(i)
