@@ -134,6 +134,23 @@ for i in range(1, 11):
 # for loop + condition
 
 for i in range(1, 11):
+
+# for loop + condition
+
+for i in range(1, 11):
+
+    if i % 2 != 0:
+    
+        print(i)
+
+
+# for loop + list
+
+fruits = ["apple", "banana", "orange", "mango", "grape"]
+
+for fruit in fruits:
+
+    print(fruit)
     
     if i % 2 == 0:
         
