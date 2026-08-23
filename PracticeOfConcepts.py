@@ -110,11 +110,48 @@
 #         print(i)
 
 # for loop + condition
-for i in range(1,11):
-    if i % 2 != 0:
-        print(i)
+# for i in range(1,11):
+#     if i % 2 != 0:
+#         print(i)
 
-# for loop + list
-fruits = ["apple", "banana", "orange", "mango", "grape"]
-for fruit in fruits:
-    print(fruit)
+# # for loop + list
+# fruits = ["apple", "banana", "orange", "mango", "grape"]
+# for fruit in fruits:
+#     print(fruit)
+
+# for loop + list + if
+# fruits = ["apple", "banana", "orange", "mango", "grape"]
+# for fruit in fruits:
+#     if fruit == "apple" or fruit == "mango":
+#         print(fruit)
+
+# fruit = ("orange")
+# if fruit == "apple":
+#     print(fruit)
+# if fruit == "orange":
+#     print(fruit)
+# if fruit == "apple" or fruit == "orange":
+#     print(fruit)   
+
+# # if
+# age = 20
+# if age < 18:
+#     print(age)
+# if age > 30:
+#     print(age)
+# if age > 18 and age < 30:
+#     print(age)
+
+# if
+# age = 25
+# if age >= 18:
+#     print("Adult")
+
+# number is positive, negative, or zero.
+number = int(input("Enter a number: "))
+if number > 0:
+    print("Positive")
+elif number < 0:
+    print("Negative")
+else:
+    print("Zero")
