@@ -170,7 +170,8 @@ for fruit in fruits:
  if fruit == "apple" or fruit == "orange":
      print(fruit)   
 
-# # if
+# if
+```python
 # age = 20
  if age < 18:
      print(age)
@@ -178,13 +179,15 @@ for fruit in fruits:
      print(age)
  if age > 18 and age < 30:
      print(age)
-
+```
+```python
 # if
  age = 25
  if age >= 18:
      print("Adult")
-
+```
 # number is positive, negative, or zero.
+```python
  number = int(input("Enter a number: "))
  if number > 0:
      print("Positive")
@@ -192,6 +195,7 @@ for fruit in fruits:
      print("Negative")
  else:
      print("Zero")
+```
 
 ## Number Checker
 
