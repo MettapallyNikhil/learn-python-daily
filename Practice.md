@@ -192,3 +192,33 @@ for fruit in fruits:
      print("Negative")
  else:
      print("Zero")
+
+## Number Checker
+
+The program takes a number as input and checks whether the number is:
+
+- Positive
+- Negative
+- Zero
+
+If the number is positive, it performs an additional check to determine whether the number is:
+
+- Even
+- Odd
+
+```python
+number = int(input("Enter a Number: "))
+
+if number > 0:
+    print("Positive")
+
+    if number % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+
+elif number < 0:
+    print("Negative")
+
+else:
+    print("Zero")
