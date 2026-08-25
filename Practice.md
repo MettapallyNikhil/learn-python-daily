@@ -2,6 +2,7 @@
 
 ## Comparison Operators
 
+```Python
 a = int(input("Enter any Number: "))
 b = int(input("Enter any Number: "))
 
@@ -9,7 +10,7 @@ print(a > b)
 print(a < b)
 print(a == b)
 print(a != b)
-
+````
 
 ## Assignment Operators
 
