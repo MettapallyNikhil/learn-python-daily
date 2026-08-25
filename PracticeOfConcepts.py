@@ -157,14 +157,54 @@
 #     print("Zero")
 
 # Number checker
-number = int(input("Enter a Number: "))
-if number > 0:
-    print("Positive")
-    if number % 2 == 0:
-        print("Even")
-    else:
-        print("Odd")
-elif number < 0:
-    print("Negative")
-else:
-    print("Zero") 
+# number = int(input("Enter a Number: "))
+# if number > 0:
+#     print("Positive")
+#     if number % 2 == 0:
+#         print("Even")
+#     else:
+#         print("Odd")
+# elif number < 0:
+#     print("Negative")
+# else:
+#     print("Zero") 
+
+# Simple age checker
+# number = int(input("Enter Your Age: "))
+# if number < 13:
+#     print("Child")
+# elif number >= 13 and number <= 17:
+#     print("Teenager")
+# elif number >= 18 and number <= 59:
+#     print("Adult")
+# else:
+#     print("Senior") 
+
+# Even/Odd + Positive/Negative
+# number = int(input("Enter a number: "))
+# if number > 0:
+#     print("Positive")
+#     if number % 2 == 0:
+#         print("Even")
+#     else:
+#         print("Odd")
+# elif number < 0:
+#     print("Negative")
+# else:
+#     print("Zero") 
+
+# Small Exercise:
+# age = int(input("Enter age: "))
+# if age >= 18 and age <= 30:
+#     print("Young Adult")
+# else:
+#     print("Other")
+
+# Ask the user for two numbers.
+# a = int(input("Enter first Number: "))
+# b = int(input("Enter second Number: "))
+
+# if a > 0 and b > 0:
+#     print("Both positive")
+# else:
+#     print("At least one is negative")
