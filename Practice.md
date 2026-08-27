@@ -285,3 +285,28 @@ if a > 0 and b > 0:
 else:
     print("At least one is negative")
 ````
+
+# Ask for two numbers and print:
+"Both are even" if both numbers are even
+"At least one is odd" otherwise
+```python
+a = int(input("Enter first Number: "))
+b = int(input("Enter second Number: "))
+
+if a % 2 == 0 and b % 2 == 0:
+    print("Both are even")
+else:
+    print("At least one is odd")
+````
+
+# Ask the user for two numbers.
+"At least one is positive" if either number is positive
+"Neither is positive" otherwise
+```python
+a = int(input("Enter first Number: "))
+b = int(input("Enter second Number: "))
+
+if a > 0 or b > 0:
+    print("At least one is positive")
+else:
+    print("Neither is positive")
