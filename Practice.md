@@ -315,11 +315,15 @@ else:
 ````
 # Combination of (and + or)
 
-# Print "Valid" if:
-# both numbers are positive AND
-# at least one of them is even.
-# Otherwise print "Invalid".
+Print "Valid" if:
 
+both numbers are positive AND
+
+at least one of them is even.
+
+Otherwise print "Invalid".
+
+```python
 a = int(input("Enter first Number: "))
 b = int(input("Enter second Number: "))
 
@@ -327,3 +331,4 @@ if (a > 0 and b > 0) and (a % 2 == 0 or b % 2 == 0):
     print("both numbers are positive AND at least one of them is even")
 else:
     print("Invalid")
+````
