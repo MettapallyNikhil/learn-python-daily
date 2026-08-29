@@ -36,17 +36,24 @@ print("Nikhil")
 
 # 3. You can use a minus sign to make a negative number like-2. What happens if you put a plus sign before a number? What about 2++2?
 
-# print(-2)
+````Python
+print(-2)
 
-# print(+-2)
+print(+-2)
 
-# print(2++2)
+print(2++2)
+````
 
-# 4. In math notation, leading zeros are ok, as in 09. What happens if you try this in Python?
-# What about 011?
-# print(011)
-# SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+# 4. In math notation, leading zeros are ok, as in 09. What happens if you try this in Python? What about 011?
+
+````Python
+print(011)
+SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+````
 
 # 5. What happens if you have two values with no operator between them?
-# print(2 2)
-# SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+````Python
+print(2 2)
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+````
