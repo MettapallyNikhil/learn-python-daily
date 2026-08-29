@@ -23,13 +23,16 @@ SyntaxError: invalid syntax
 ````
 
 # 2. If you are trying to print a string, what happens if you leave out one of the quotation marks, or both?
-# print("Nikhil)
-# SyntaxError: unterminated string literal (detected at line 17)
 
-# print(Nikhil)
-# NameError: name 'Nikhil' is not defined
+````Python
+print("Nikhil)
+SyntaxError: unterminated string literal (detected at line 17)
 
-# print("Nikhil")
+print(Nikhil)
+NameError: name 'Nikhil' is not defined
+
+print("Nikhil")
+````
 
 # 3. You can use a minus sign to make a negative number like-2. What happens if you put a plus sign before a number?
 # What about 2++2?
