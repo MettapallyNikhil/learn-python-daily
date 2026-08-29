@@ -3,7 +3,7 @@
 It is a good idea to read this book in front of a computer so you can try out the examples as you go
 
 ````Python
-# print("Hello, World!")
+print("Hello, World!")
 ````
 
 # 1. In a print statement, what happens if you leave out one of the parentheses, or both?
