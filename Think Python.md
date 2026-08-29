@@ -2,10 +2,13 @@
 
 It is a good idea to read this book in front of a computer so you can try out the examples as you go
 
+````Python
 # print("Hello, World!")
+````
 
 # 1. In a print statement, what happens if you leave out one of the parentheses, or both?
 
+````Python
 print "Hello, World!" 
 SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
 
@@ -13,10 +16,11 @@ print ("Hello, World!"
 SyntaxError: '(' was never closed
 
 print "Hello, World!" )
-# SyntaxError: unmatched ')'
+SyntaxError: unmatched ')'
 
-# prnt("Hello, World!")
-# SyntaxError: invalid syntax
+prnt("Hello, World!")
+SyntaxError: invalid syntax
+````
 
 # 2. If you are trying to print a string, what happens if you leave out one of the quotation marks, or both?
 # print("Nikhil)
