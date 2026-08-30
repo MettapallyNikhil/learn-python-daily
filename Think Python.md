@@ -59,18 +59,21 @@ SyntaxError: invalid syntax. Perhaps you forgot a comma?
 ````
 
 # Exercise 1.2. Start the Python interpreter and use it as a calculator.
+
 # 1. How many seconds are there in 42 minutes 42 seconds?
 
-
+````Python
 a = 42
 b = 60
 c = 42
 d = (a*b+c)
 print(d)
-
+````
 # 2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
 
+````Python
 e = 1.61
 f = 10
 g = (f/e)
 print(g)
+````
