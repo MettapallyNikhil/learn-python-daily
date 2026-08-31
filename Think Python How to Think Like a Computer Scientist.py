@@ -45,20 +45,20 @@ a = 42
 b = 60
 c = 42
 d = (a*b+c)
-print(d)
+print(d) # total time in secs
 
 # 2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
-
-e = 1.61
-f = 10
+e = 1.61 # one mile in kms
+f = 10 # 10 kms
 g = (f/e)
-print(g)
+print(g) 
 
 # 3. If you run a 10 kilometer race in 42 minutes 42 seconds, 
 # what is your average pace (time per mile in minutes and seconds)? 
-# What is your average speed in miles per hour?
-
-#seconds
-h = d/e
+h = (d/g) # time in secs
 print(h)
-print(h/60)
+i = (h/60) # in minutes
+print(i)
+# What is your average speed in miles per hour?
+j = (g/d*3600)
+print(j)
