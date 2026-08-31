@@ -78,10 +78,16 @@ g = (f/e)
 print(g)
 ````
 # 3. If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per mile in minutes and seconds)? 
+
+````Python
 h = (d/g) # time in secs
 print(h)
 i = (h/60) # in minutes
 print(i)
+````
+
 # What is your average speed in miles per hour?
+````Python
 j = (g/d*3600)
 print(j)
+````
