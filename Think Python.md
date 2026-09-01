@@ -91,3 +91,5 @@ print(i)
 j = (g/d*3600)
 print(j)
 ````
+
+# Exercise 2.1
