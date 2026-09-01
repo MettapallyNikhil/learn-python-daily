@@ -120,7 +120,10 @@ What if you put a period at the end of a statement?
 ````Python
 if. #SyntaxError: invalid syntax
 ````
-# In math notation you can multiply x and y like this: xy. What happens if you try that in Python?
-# x = 2
-# y = 3
-# print(xy) # NameError: name 'xy' is not defined
+In math notation you can multiply x and y like this: xy. What happens if you try that in Python?
+
+````Python
+x = 2
+y = 3
+print(xy) # NameError: name 'xy' is not defined
+````
