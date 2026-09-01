@@ -111,11 +111,15 @@ x = y = 1
 
 In some languages every statement ends with a semi-colon ;. What happens if you put a semi-colon at the end of a Python statement?
 
+````Python
 if; #SyntaxError: invalid syntax
+````
 
-# What if you put a period at the end of a statement?
-# if. #SyntaxError: invalid syntax
+What if you put a period at the end of a statement?
 
+````Python
+if. #SyntaxError: invalid syntax
+````
 # In math notation you can multiply x and y like this: xy. What happens if you try that in Python?
 # x = 2
 # y = 3
