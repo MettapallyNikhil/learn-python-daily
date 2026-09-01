@@ -41,24 +41,46 @@
 
 # Exercise 1.2. Start the Python interpreter and use it as a calculator.
 # 1. How many seconds are there in 42 minutes 42 seconds?
-a = 42
-b = 60
-c = 42
-d = (a*b+c)
-print(d) # total time in secs
+# a = 42
+# b = 60
+# c = 42
+# d = (a*b+c)
+# print(d) # total time in secs
 
 # 2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
-e = 1.61 # one mile in kms
-f = 10 # 10 kms
-g = (f/e)
-print(g) 
+# e = 1.61 # one mile in kms
+# f = 10 # 10 kms
+# g = (f/e)
+# print(g) 
 
 # 3. If you run a 10 kilometer race in 42 minutes 42 seconds, 
 # what is your average pace (time per mile in minutes and seconds)? 
-h = (d/g) # time in secs
-print(h)
-i = (h/60) # in minutes
-print(i)
-# What is your average speed in miles per hour?
-j = (g/d*3600)
-print(j)
+# h = (d/g) # time in secs
+# print(h)
+# i = (h/60) # in minutes
+# print(i)
+# # What is your average speed in miles per hour?
+# j = (g/d*3600)
+# print(j)
+
+# Exercise 2.1. 
+# Repeating my advice from the previous chapter, whenever you learn a new feature,
+# you should try it out in interactive mode and make errors on purpose to see what goes wrong.
+# We’ve seen that n = 42 is legal. What about 42 = n?
+# n = 42
+# 42 = n # SyntaxError: cannot assign to literal
+
+# Howabout x = y = 1?
+# x = y = 1
+
+# In some languages every statement ends with a semi-colon, ;. What happens if you put a
+# semi-colon at the end of a Python statement?
+# if; #SyntaxError: invalid syntax
+
+# What if you put a period at the end of a statement?
+# if. #SyntaxError: invalid syntax
+
+# In math notation you can multiply x and y like this: xy. What happens if you try that in Python?
+# x = 2
+# y = 3
+# print(xy) # NameError: name 'xy' is not defined
