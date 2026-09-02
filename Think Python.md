@@ -127,3 +127,11 @@ x = 2
 y = 3
 print(xy) # NameError: name 'xy' is not defined
 ````
+# Exercise 2.2 Practice using the Python interpreter as a calculator:
+
+# 1. The volume of a sphere with radius r is 4/3πr3. What is the volume of a sphere with radius 5?
+````Python
+r = 5
+volume = (4/3)*3.14159*(r**3)
+print(volume)
+````
