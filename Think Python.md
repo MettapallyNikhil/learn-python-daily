@@ -135,3 +135,13 @@ r = 5
 volume = (4/3)*3.14159*(r**3)
 print(volume)
 ````
+# 2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount. Shipping costs $3 for the first copy and 75 cents for each additional copy. What is the total wholesale cost for 60 copies?
+````Python
+cover_price_of_a_book = 24.95
+discount = 0.4
+shipping_costs_for_the_first_copy = 3
+shipping_costs_for_additional_copies = 0.75
+wholesale_cost = cover_price_of_a_book * (1 - discount) * 60 + shipping_costs_for_the_first_copy 
++ shipping_costs_for_additional_copies * (60 - 1)
+print(wholesale_cost)
+````
