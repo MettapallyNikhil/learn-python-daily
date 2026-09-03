@@ -146,6 +146,7 @@ wholesale_cost = cover_price_of_a_book * (1 - discount) * 60 + shipping_costs_fo
 print(wholesale_cost)
 ````
 # 3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at tempo (7:12 per mile) and 1 mile at easy pace again, what time do I get home for breakfast?
+````Python
 import datetime
 initial_leaving_house = datetime.datetime(2026, 1, 1, 6, 52)
 mile_at_an_easy_pace = datetime.timedelta(minutes=8, seconds=15)
@@ -157,3 +158,4 @@ total_running_time = (
 )
 arrival_time = initial_leaving_house + total_running_time
 print(arrival_time.strftime("%I:%M:%S %p"))
+````
