@@ -87,19 +87,31 @@
 
 # Exercise 2.2. Practice using the Python interpreter as a calculator:
 # 1. The volume of a sphere with radius r is 4/3πr3. What is the volume of a sphere with radius 5?
-r = 5
-volume = (4/3)*3.14159*(r**3)
-print(volume)
+# r = 5
+# volume = (4/3)*3.14159*(r**3)
+# print(volume)
 
 # 2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount. Shipping costs
 # $3 for the first copy and 75 cents for each additional copy. What is the total wholesale cost for 60 copies?
-cover_price_of_a_book = 24.95
-discount = 0.4
-shipping_costs_for_the_first_copy = 3
-shipping_costs_for_additional_copies = 0.75
-wholesale_cost = cover_price_of_a_book * (1 - discount) * 60 + shipping_costs_for_the_first_copy 
-+ shipping_costs_for_additional_copies * (60 - 1)
-print(wholesale_cost)
+# cover_price_of_a_book = 24.95
+# discount = 0.4
+# shipping_costs_for_the_first_copy = 3
+# shipping_costs_for_additional_copies = 0.75
+# wholesale_cost = cover_price_of_a_book * (1 - discount) * 60 + shipping_costs_for_the_first_copy 
+# + shipping_costs_for_additional_copies * (60 - 1)
+# print(wholesale_cost)
+
 
 # 3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at
 # tempo (7:12 per mile) and 1 mile at easy pace again, what time do I get home for breakfast?
+import datetime
+initial_leaving_house = datetime.datetime(2026, 1, 1, 6, 52)
+mile_at_an_easy_pace = datetime.timedelta(minutes=8, seconds=15)
+mile_at_tempo = datetime.timedelta(minutes=7, seconds=12)
+total_running_time = (
+    mile_at_an_easy_pace
+    + (mile_at_tempo * 3)
+    + mile_at_an_easy_pace
+)
+arrival_time = initial_leaving_house + total_running_time
+print(arrival_time.strftime("%I:%M:%S %p"))
