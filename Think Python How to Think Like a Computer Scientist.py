@@ -104,14 +104,24 @@
 
 # 3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at
 # tempo (7:12 per mile) and 1 mile at easy pace again, what time do I get home for breakfast?
-import datetime
-initial_leaving_house = datetime.datetime(2026, 1, 1, 6, 52)
-mile_at_an_easy_pace = datetime.timedelta(minutes=8, seconds=15)
-mile_at_tempo = datetime.timedelta(minutes=7, seconds=12)
-total_running_time = (
-    mile_at_an_easy_pace
-    + (mile_at_tempo * 3)
-    + mile_at_an_easy_pace
-)
-arrival_time = initial_leaving_house + total_running_time
-print(arrival_time.strftime("%I:%M:%S %p"))
+# import datetime
+# initial_leaving_house = datetime.datetime(2026, 1, 1, 6, 52)
+# mile_at_an_easy_pace = datetime.timedelta(minutes=8, seconds=15)
+# mile_at_tempo = datetime.timedelta(minutes=7, seconds=12)
+# total_running_time = (
+#     mile_at_an_easy_pace
+#     + (mile_at_tempo * 3)
+#     + mile_at_an_easy_pace
+# )
+# arrival_time = initial_leaving_house + total_running_time
+# print(arrival_time.strftime("%I:%M:%S %p"))
+
+# Exercises 3.1.
+# Write a function named right_justify that takes a string named s as a parameter
+# and prints the string with enough leading spaces so that the last letter of the string is in column 70
+# of the display. right_justify('monty')
+# Hint: Use string concatenation and repetition. Also, Python provides a built-in function called len
+# that returns the length of a string, so the value of len('monty') is 5
+def right_justify(s):
+    print(' ' * (70 - len(s)) + s)
+right_justify('monty')
