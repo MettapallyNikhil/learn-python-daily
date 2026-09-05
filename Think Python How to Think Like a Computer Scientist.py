@@ -122,6 +122,20 @@
 # of the display. right_justify('monty')
 # Hint: Use string concatenation and repetition. Also, Python provides a built-in function called len
 # that returns the length of a string, so the value of len('monty') is 5
-def right_justify(s):
-    print(' ' * (70 - len(s)) + s)
-right_justify('monty')
+# def right_justify(s):
+#     print(' ' * (70 - len(s)) + s)
+# right_justify('monty')
+
+import math
+math 
+
+def print_lyrics():
+    print("I'm a lumberjack, and I'm okay.")
+    print("I sleep all night and I work all day.")
+print_lyrics()
+
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+    print_lyrics()
+repeat_lyrics()
