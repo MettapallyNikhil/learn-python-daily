@@ -171,3 +171,17 @@ def right_justify(s):
     print(' ' * (70 - len(s)) + s)
 right_justify('monty')
 ````
+# Adding new Function
+
+`````Python
+def print_lyrics():
+    print("I'm a lumberjack, and I'm okay.")
+    print("I sleep all night and I work all day.")
+print_lyrics()
+
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+    print_lyrics()
+repeat_lyrics()
+``````
