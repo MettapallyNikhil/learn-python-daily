@@ -185,3 +185,34 @@ def repeat_lyrics():
     print_lyrics()
 repeat_lyrics()
 ``````
+# Inside a function, the arguments are assigned to the variable called Parameters
+def print_thrice(bruce):
+    print(bruce)
+    print(bruce)
+    print(bruce)
+
+print_thrice('Spam')
+print_thrice('Nikhil')
+print_thrice(math.pi)
+
+print_thrice('Hello, World!'*10)
+
+# We can use variable as an argument to a function. The value of the variable is assigned to the parameter.
+Micheal = "Nikhil & Snehal"
+print_thrice(Micheal)
+
+# Variables are parameters are local
+def cat_twice(part1, part2, part3):
+    # Concatenates three strings and prints them three times.
+    cat = part1 + part2 + part3
+    print_thrice(cat)
+
+a = 'Bing'
+b = 'Bong'
+c = 'Bung'
+cat_twice(a, b, c)
+
+# I am using the script mode, untill and unless i say print it wont print
+
+math.sqrt(10)
+print(math.sqrt(10))
