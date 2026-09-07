@@ -140,34 +140,60 @@ math
 #     print_lyrics()
 # repeat_lyrics()
 
-# Inside a function, the arguments are assigned to the variable called Parameters
-def print_thrice(bruce):
-    print(bruce)
-    print(bruce)
-    print(bruce)
+# # Inside a function, the arguments are assigned to the variable called Parameters
+# def print_thrice(bruce):
+#     print(bruce)
+#     print(bruce)
+#     print(bruce)
 
-print_thrice('Spam')
-print_thrice('Nikhil')
-print_thrice(math.pi)
+# print_thrice('Spam')
+# print_thrice('Nikhil')
+# print_thrice(math.pi)
 
-print_thrice('Hello, World!'*10)
+# print_thrice('Hello, World!'*10)
 
-# We can use variable as an argument to a function. The value of the variable is assigned to the parameter.
-Micheal = "Nikhil & Snehal"
-print_thrice(Micheal)
+# # We can use variable as an argument to a function. The value of the variable is assigned to the parameter.
+# Micheal = "Nikhil & Snehal"
+# print_thrice(Micheal)
 
-# Variables are parameters are local
-def cat_twice(part1, part2, part3):
-    # Concatenates three strings and prints them three times.
-    cat = part1 + part2 + part3
-    print_thrice(cat)
+# # Variables are parameters are local
+# def cat_twice(part1, part2, part3):
+#     # Concatenates three strings and prints them three times.
+#     cat = part1 + part2 + part3
+#     print_thrice(cat)
 
-a = 'Bing'
-b = 'Bong'
-c = 'Bung'
-cat_twice(a, b, c)
+# a = 'Bing'
+# b = 'Bong'
+# c = 'Bung'
+# cat_twice(a, b, c)
 
-# I am using the script mode, untill and unless i say print it wont print
-# math.sqrt(10)
-print(math.sqrt(10))
+# # I am using the script mode, untill and unless i say print it wont print
+# # math.sqrt(10)
+# print(math.sqrt(10))
 
+# Exercise 3.2. 
+
+# A function object is a value you can assign to a variable or pass as an argument. 
+# For example, do_twice is a function that takes a function object as an argument and calls it twice:
+def do_twice(f):
+    f()
+    f()
+# Here’s an example that uses do_twice to call a function named print_spam twice.
+def print_spam():
+    print('spam')
+    
+do_twice(print_spam)
+
+# 1. Type this example into a script and test it.
+do_twice(print_spam)
+
+# 2. Modify do_twice so that it takes two arguments, a function object and a value, and calls the
+# function twice, passing the value as an argument.
+
+
+# 3. Copy the definition of print_twice from earlier in this chapter to your script.
+# 4. Use the modified version of do_twice to call print_twice twice, passing 'spam' as an
+# argument.
+# 5. Define a new function called do_four that takes a function object and a value and calls the
+# function four times, passing the value as a parameter. There should be only two statements in
+# the body of this function, not four.
