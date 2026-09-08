@@ -161,10 +161,8 @@ print(arrival_time.strftime("%I:%M:%S %p"))
 ````
 # Exercises 3.1.
 
-Write a function named right_justify that takes a string named as a parameter and prints the string with enough leading spaces so that the last letter of the string is in column 70 of the display. 
-right_justify('monty')
-
-# Hint: Use string concatenation and repetition. Also, Python provides a built-in function called lenthat returns the length of a string, so the value of len('monty') is 5
+# Write a function named right_justify that takes a string named as a parameter and prints the string with enough leading spaces so that the last letter of the string is in column 70 of the display. 
+right_justify('monty') Hint: Use string concatenation and repetition. Also, Python provides a built-in function called lenthat returns the length of a string, so the value of len('monty') is 5
 
 ````Python
 def right_justify(s):
