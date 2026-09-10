@@ -261,3 +261,21 @@ def do_four(f, value):
     do_twice(f, value)
     do_twice(f, value)
 ``````
+# Case study: interface design
+
+4.1 The turtle module
+
+`````Python
+import turtle
+bob = turtle.Turtle()
+bob.fd(100)
+bob.lt(90)
+bob.fd(100)
+bob.lt(90)
+bob.fd(100)
+bob.lt(90)
+bob.fd(100)
+bob.lt(90)
+print(bob)
+turtle.mainloop()
+``````
