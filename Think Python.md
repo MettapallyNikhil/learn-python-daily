@@ -263,7 +263,7 @@ def do_four(f, value):
 ``````
 # Case study: interface design
 
-4.1 The turtle module
+4.1 The turtle module making an square
 
 `````Python
 import turtle
