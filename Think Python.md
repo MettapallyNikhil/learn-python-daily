@@ -279,3 +279,18 @@ bob.lt(90)
 print(bob)
 turtle.mainloop()
 ``````
+# 4.2 Simple repetition 
+
+`````Python
+# for i in range(4):
+#     print('Hello!')
+``````
+# Drawing a square using a for loop
+`````Python
+import turtle
+bob = turtle.Turtle()
+for i in range(4):
+    bob.fd(100)
+    bob.lt(90)
+turtle.mainloop()
+``````
