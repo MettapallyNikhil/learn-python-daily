@@ -282,8 +282,8 @@ turtle.mainloop()
 # 4.2 Simple repetition 
 
 `````Python
-# for i in range(4):
-#     print('Hello!')
+for i in range(4):
+    print('Hello!')
 ``````
 # Drawing a square using a for loop
 `````Python
