@@ -46,18 +46,28 @@
 # Run the program again. 
 # Test your program with a range of values for length.
 
-import turtle
-bob = turtle.Turtle()
-def square(t, length):
-    for i in range(4):
-        t.fd(length)
-        t.lt(90)
-square(bob, -150) 
-turtle.mainloop()
+# import turtle
+# bob = turtle.Turtle()
+# def square(t, length):
+#     for i in range(4):
+#         t.fd(length)
+#         t.lt(90)
+# square(bob, -150) 
+# turtle.mainloop()
 
 # 3. Make a copy of square and change the name to polygon. Add another parameter
 # named n and modify the body so it draws an n-sided regular polygon. Hint: The
 # exterior angles of an n-sided regular polygon are 360/n degrees.
+
+import turtle
+bob = turtle.Turtle()
+def polygon(t, length, n):
+    for i in range(n):
+        t.fd(length)
+        t.lt(360/n)
+polygon(bob, 150, 5) 
+turtle.mainloop()
+
 # 4. Write a function called circle that takes a turtle, t, and radius, r, as parameters and
 # that draws an approximate circle by calling polygon with an appropriate length and
 # number of sides. Test your function with a range of values of r.
