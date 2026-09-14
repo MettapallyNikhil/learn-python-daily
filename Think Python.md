@@ -330,3 +330,18 @@ def polygon(t, length, n):
 polygon(bob, 150, 5) 
 turtle.mainloop()
 ``````
+# 4. Write a function called circle that takes a turtle, t, and radius, r, as parameters and that draws an approximate circle by calling polygon with an appropriate length and number of sides. Test your function with a range of values of r. Hint: figure out the circumference of the circle and make sure that length * n = circumference.
+`````Python
+import turtle
+bob = turtle.Turtle()
+def circle(t, r):
+    # Calculate the number of sides for the polygon
+    n = 25
+    # Calculate the length of each side
+    length = 2 * r * 3.14159 / n
+    for i in range(n):
+        t.fd(length)
+        t.lt(360/n)
+circle(bob, 100) 
+turtle.mainloop()
+``````
