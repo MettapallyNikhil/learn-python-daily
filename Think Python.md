@@ -369,12 +369,12 @@ def arc(t, r, angle):
 import turtle
 bob = turtle.Turtle()
 
- def polyline(t, n, length, angle):
+def polyline(t, n, length, angle):
      """Draws n line segments with the given length and angle between them."""
      for i in range(n):
          t.fd(length)
          t.lt(angle)
 
- polyline(bob, 100, 180, 180)
- turtle.mainloop()
+polyline(bob, 100, 180, 180)
+turtle.mainloop()
 ``````
