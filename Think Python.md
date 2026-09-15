@@ -364,7 +364,7 @@ turtle.mainloop()
 # arc(bob, 100, 180)
 # turtle.mainloop()
 ``````
-6. Polyline
+# 6. Polyline
 `````Python
 # import turtle
 # bob = turtle.Turtle()
