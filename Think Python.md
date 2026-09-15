@@ -345,3 +345,36 @@ def circle(t, r):
 circle(bob, 100) 
 turtle.mainloop()
 ``````
+# 5. Make a more general version of circle called arc that takes an additional parameter angle, which determines what fraction of a circle to draw. angle is in units of degrees, so when angle=360, arc should draw a complete circle.
+`````Python
+# import turtle
+# bob = turtle.Turtle()
+# def arc(t, r, angle):
+#     # Calculate the number of sides for the polygon
+#     n = 100
+#     # Calculate the length of each side
+#     length = 2 * r * 3.14159 / n
+#     # Calculate the angle of each turn
+#     turn_angle = 360 / n
+#     # Draw the arc
+#     for i in range(int(angle / turn_angle)):
+#         t.fd(length)
+#         t.lt(turn_angle)
+
+# arc(bob, 100, 180)
+# turtle.mainloop()
+``````
+6. Polyline
+`````Python
+# import turtle
+# bob = turtle.Turtle()
+
+# def polyline(t, n, length, angle):
+#     """Draws n line segments with the given length and angle between them."""
+#     for i in range(n):
+#         t.fd(length)
+#         t.lt(angle)
+
+# polyline(bob, 100, 180, 180)
+# turtle.mainloop()
+``````
