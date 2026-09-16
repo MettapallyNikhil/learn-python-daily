@@ -138,3 +138,304 @@
 # polyline(bob, 100, 180, 180)
 # turtle.mainloop()
 
+# Exercise 4.1. 
+
+# 1. Draw a stack diagram that shows the state of the program while executing 
+# circle(bob,radius). You can do the arithmetic by hand or add print statements to the code.
+
+# import turtle
+# import math
+# bob = turtle.Turtle()
+
+# def polygon(t, length, n):
+#     print("---- POLYGON FRAME ----")
+#     print("t =", t)
+#     print("length =", length)
+#     print("n =", n)
+#     for i in range(n):
+#         print("i =", i)
+#         t.fd(length)
+#         t.lt(360 / n)
+
+# def circle(t, r):
+#     print("---- CIRCLE FRAME ----")
+#     print("t =", t)
+#     print("r =", r)
+#     circumference = 2 * math.pi * r
+#     print("circumference =", circumference)
+#     n = int(circumference / 3) + 3
+#     print("n =", n)
+#     length = circumference / n
+#     print("length =", length)
+#     polygon(t, length, n)
+
+# circle(bob, 100)
+# turtle.mainloop()
+
+# 2. The version of arc in Section 4.7 is not very accurate because the linear approximation of the
+# circle is always outside the true circle. As a result, the Turtle ends up a few pixels away from
+# the correct destination. My solution shows a way to reduce the effect of this error. Read the
+# code and see if it makes sense to you. If you draw a diagram, you might see how it works.
+
+# import turtle
+# import math
+# def arc(t, r, angle):
+#     arc_length = 2 * math.pi * r * angle / 360
+#     n = int(arc_length / 3) + 1
+#     step_length = arc_length / n
+#     step_angle = angle / n
+#     for i in range(n):
+#         t.fd(step_length)
+#         t.lt(step_angle)
+
+# def circle(t, r):
+#     arc(t, r, 360)
+
+# bob = turtle.Turtle()
+# circle(bob, 100)
+# turtle.mainloop()
+
+# Exercise 4.2. 
+
+# Write an appropriately general set of functions that can draw flowers
+# from __future__ import print_function, division
+# import math
+# import turtle
+
+# def polyline(t, n, length, angle):
+#     """Draws n line segments.
+#     t: Turtle
+#     n: number of line segments
+#     length: length of each segment
+#     angle: degrees to turn after each segment
+#     """
+#     for i in range(n):
+#         t.fd(length)
+#         t.lt(angle)
+
+# def arc(t, r, angle):
+#     """Draws an arc with the given radius and angle.
+#     t: Turtle
+#     r: radius
+#     angle: angle subtended by the arc, in degrees
+#     """
+#     arc_length = 2 * math.pi * r * abs(angle) / 360
+#     n = int(arc_length / 3) + 1
+#     step_length = arc_length / n
+#     step_angle = float(angle) / n
+#     polyline(t, n, step_length, step_angle)
+
+# def circle(t, r):
+#     """Draws a circle with the given radius.
+#     t: Turtle
+#     r: radius
+#     """
+#     arc(t, r, 360)
+
+# def petal(t, r, angle):
+#     """Draws a petal using two arcs.
+#     t: Turtle
+#     r: radius of the arcs
+#     angle: angle (degrees) that subtends the arcs
+#     """
+#     for i in range(2):
+#         arc(t, r, angle)
+#         t.lt(180 - angle)
+
+# def flower(t, n, r, angle):
+#     """Draws a flower with n petals.
+#     t: Turtle
+#     n: number of petals
+#     r: radius of the arcs
+#     angle: angle (degrees) that subtends the arcs
+#     """
+#     for i in range(n):
+#         petal(t, r, angle)
+#         t.lt(360.0 / n)
+
+# def move(t, length):
+#     """Moves the turtle forward without leaving a trail.
+#     t: Turtle
+#     length: distance to move
+#     The pen is left down after the movement.
+#     """
+#     t.penup()
+#     t.forward(length)
+#     t.pendown()
+
+# # Create turtle
+# bob = turtle.Turtle()
+# # Draw three flowers
+# move(bob, -100)
+# flower(bob, 7, 60.0, 60.0)
+# move(bob, 100)
+# flower(bob, 10, 40.0, 80.0)
+# move(bob, 100)
+# flower(bob, 20, 140.0, 20.0)
+# # Hide turtle and keep window open
+# bob.hideturtle()
+# turtle.mainloop()
+
+# Exercise 4.3. 
+# Write an appropriately general set of functions that can draw shapes
+
+# from __future__ import print_function, division
+# import math
+# import turtle
+
+# def draw_pie(t, n, r):
+#     """Draws a pie, then moves into position to the right.
+#     t: Turtle
+#     n: number of segments
+#     r: length of the radial spokes
+#     """
+#     polypie(t, n, r)
+#     t.pu()
+#     t.fd(r*2 + 10)
+#     t.pd()
+
+# def polypie(t, n, r):
+#     """Draws a pie divided into radial segments.
+#     t: Turtle
+#     n: number of segments
+#     r: length of the radial spokes
+#     """
+#     angle = 360.0 / n
+#     for i in range(n):
+#         isosceles(t, r, angle/2)
+#         t.lt(angle)
+
+# def isosceles(t, r, angle):
+#     """Draws an icosceles triangle.
+#     The turtle starts and ends at the peak, facing the middle of the base.
+#     t: Turtle
+#     r: length of the equal legs
+#     angle: half peak angle in degrees
+#     """
+#     y = r * math.sin(angle * math.pi / 180)
+#     t.rt(angle)
+#     t.fd(r)
+#     t.lt(90+angle)
+#     t.fd(2*y)
+#     t.lt(90+angle)
+#     t.fd(r)
+#     t.lt(180-angle)
+
+# bob = turtle.Turtle()
+# bob.pu()
+# bob.bk(130)
+# bob.pd()
+
+# # draw polypies with various number of sides
+# size = 40
+# draw_pie(bob, 5, size)
+# draw_pie(bob, 6, size)
+# draw_pie(bob, 7, size)
+# draw_pie(bob, 8, size)
+
+# bob.hideturtle()
+# turtle.mainloop()
+
+# Exercise 4.4. 
+
+# The letters of the alphabet can be constructed from a moderate number of basic elements, 
+# like vertical and horizontal lines and a few curves. Design an alphabet that can be drawn
+# with a minimal number of basic elements and then write functions that draw the letters.
+
+# from __future__ import print_function, division
+# import string
+# import turtle
+
+
+# """
+# To use this typewriter, you have to provide a module named letters.py
+# that contains functions with names like draw_a, draw_b, etc.
+# """
+
+# # check if the reader has provided letters.py
+# try:
+#     import letters
+# except ImportError as e:
+#     message = e.args[0]
+#     if message.startswith('No module'):
+#         raise ImportError(message + 
+#                           '\nYou have to provide a module named letters.py')
+
+
+# def teleport(t, x, y):
+#     """Moves the turtle without drawing a line.
+
+#     Postcondition: pen is down
+
+#     t: Turtle
+#     x: coordinate
+#     y: coordinate
+#     """
+#     t.pu()
+#     t.goto(x, y)
+#     t.pd()
+
+
+# def keypress(char):
+#     """Handles the event when a user presses a key.
+
+#     Checks if there is a function with the right name; otherwise
+#     it prints an error message.
+
+#     char: string, letter to draw
+#     """
+#     # if we're still drawing the previous letter, bail out
+#     if bob.busy:
+#         return
+#     else:
+#         bob.busy = True
+
+#     # figure out which function to call, and call it
+#     try:
+#         name = 'draw_' + char
+#         func = getattr(letters, name)
+#     except AttributeError:
+#         print("I don't know how to draw an", char)
+#         bob.busy = False
+#         return
+
+#     func(bob, size)
+
+#     letters.skip(bob, size/2)
+#     bob.busy = False
+
+
+# def carriage_return():
+#     """Moves to the beginning of the next line.
+#     """
+#     teleport(bob, -180, bob.ycor() - size*3)
+#     bob.busy = False
+
+
+# def presser(char):
+#     """Returns a function object that executes keypress.
+
+#     char: character to draw when the function is executed
+
+#     returns: function with no arguments
+#     """
+#     def func():
+#         keypress(char)
+#     return func
+
+
+# # create and position the turtle
+# size = 20
+# bob = turtle.Turtle()
+# bob.busy = False
+# teleport(bob, -180, 150)
+
+# # tell world to call keypress when the user presses a key
+# screen = bob.getscreen()
+
+# for char in string.ascii_lowercase:
+#     screen.onkey(presser(char), char)
+
+# screen.onkey(carriage_return, 'Return')
+# screen.listen()
+# turtle.mainloop()
