@@ -381,36 +381,36 @@ turtle.mainloop()
 # Exercise 4.4. 
 
 # 1. Draw a stack diagram that shows the state of the program while executing circle(bob,radius). You can do the arithmetic by hand or add print statements to the code.
+`````Python
+import turtle
+import math
+bob = turtle.Turtle()
 
-# import turtle
-# import math
-# bob = turtle.Turtle()
+def polygon(t, length, n):
+    print("---- POLYGON FRAME ----")
+    print("t =", t)
+    print("length =", length)
+    print("n =", n)
+    for i in range(n):
+         print("i =", i)
+         t.fd(length)
+         t.lt(360 / n)
 
-# def polygon(t, length, n):
-#     print("---- POLYGON FRAME ----")
-#     print("t =", t)
-#     print("length =", length)
-#     print("n =", n)
-#     for i in range(n):
-#         print("i =", i)
-#         t.fd(length)
-#         t.lt(360 / n)
+def circle(t, r):
+    print("---- CIRCLE FRAME ----")
+    print("t =", t)
+    print("r =", r)
+    circumference = 2 * math.pi * r
+    print("circumference =", circumference)
+    n = int(circumference / 3) + 3
+    print("n =", n)
+    length = circumference / n
+    print("length =", length)
+    polygon(t, length, n)
 
-# def circle(t, r):
-#     print("---- CIRCLE FRAME ----")
-#     print("t =", t)
-#     print("r =", r)
-#     circumference = 2 * math.pi * r
-#     print("circumference =", circumference)
-#     n = int(circumference / 3) + 3
-#     print("n =", n)
-#     length = circumference / n
-#     print("length =", length)
-#     polygon(t, length, n)
-
-# circle(bob, 100)
-# turtle.mainloop()
-
+circle(bob, 100)
+turtle.mainloop()
+``````
 # 2. The version of arc in Section 4.7 is not very accurate because the linear approximation of the
 # circle is always outside the true circle. As a result, the Turtle ends up a few pixels away from
 # the correct destination. My solution shows a way to reduce the effect of this error. Read the
