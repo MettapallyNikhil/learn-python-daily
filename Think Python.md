@@ -706,9 +706,8 @@ draw_spiral(bob, n=1000)
 turtle.mainloop()
 ``````
 
-# 
+# 5.1 Floor division and modulus
 
-5.1 Floor division and modulus
 `````Python
 a = 17
 b = 5
