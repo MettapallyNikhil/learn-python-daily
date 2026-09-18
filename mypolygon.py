@@ -442,27 +442,69 @@
 
 # Spiral
 
-from __future__ import print_function, division
-import turtle
+# from __future__ import print_function, division
+# import turtle
 
-def draw_spiral(t, n, length=3, a=0.1, b=0.0002):
-    """Draws an Archimedian spiral starting at the origin.
-    Args:
-      n: how many line segments to draw
-      length: how long each segment is
-      a: how loose the initial spiral starts out (larger is looser)
-      b: how loosly coiled the spiral is (larger is looser)
-    http://en.wikipedia.org/wiki/Spiral
-    """
-    theta = 0.0
+# def draw_spiral(t, n, length=3, a=0.1, b=0.0002):
+#     """Draws an Archimedian spiral starting at the origin.
+#     Args:
+#       n: how many line segments to draw
+#       length: how long each segment is
+#       a: how loose the initial spiral starts out (larger is looser)
+#       b: how loosly coiled the spiral is (larger is looser)
+#     http://en.wikipedia.org/wiki/Spiral
+#     """
+#     theta = 0.0
 
-    for i in range(n):
-        t.fd(length)
-        dtheta = 1 / (a + b * theta)
-        t.lt(dtheta)
-        theta += dtheta
+#     for i in range(n):
+#         t.fd(length)
+#         dtheta = 1 / (a + b * theta)
+#         t.lt(dtheta)
+#         theta += dtheta
 
-# create the world and bob
-bob = turtle.Turtle()
-draw_spiral(bob, n=1000)
-turtle.mainloop()
+# # create the world and bob
+# bob = turtle.Turtle()
+# draw_spiral(bob, n=1000)
+# turtle.mainloop()
+
+# 5.1 Floor division and modulus
+a = 17
+b = 5
+print(a // b)  # floor division
+print(a % b)   # modulus
+
+# A movie is 143 minutes long.
+a = 143
+print(a//60)  # number of hours
+print(a%60)   # number of minutes
+
+# Divisibility
+x = 20
+print(x % 4)
+print(x % 3)
+
+# Find the Last Digit
+x = 738
+print(x % 10)
+
+# Last Two Digits
+x = 738
+print(x % 100)
+
+# Split a number
+seconds = 367
+minutes = seconds // 60
+remaining_seconds = seconds % 60
+print("Minutes:", minutes)
+print("Remaining Seconds:", remaining_seconds)
+
+
+number = 947
+last_digit = number % 10
+last_two_digits = number % 100
+complete_groups_of_100 = number // 100
+remaining_after_groups = number % 100
+print("Last Digit:", last_digit)
+print("Last Two Digits:", last_two_digits)
+print("Complete Groups of 100:", complete_groups_of_100)
+print("Remaining After Groups of 100:", remaining_after_groups)
