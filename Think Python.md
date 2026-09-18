@@ -705,3 +705,55 @@ bob = turtle.Turtle()
 draw_spiral(bob, n=1000)
 turtle.mainloop()
 ``````
+
+# 
+
+5.1 Floor division and modulus
+`````Python
+a = 17
+b = 5
+print(a // b)  # floor division
+print(a % b)   # modulus
+``````
+
+# A movie is 143 minutes long.
+`````Python
+a = 143
+print(a//60)  # number of hours
+print(a%60)   # number of minutes
+``````
+# Divisibility
+`````Python
+x = 20
+print(x % 4)
+print(x % 3)
+``````
+# Find the Last Digit
+`````Python
+x = 738
+print(x % 10)
+``````
+# Last Two Digits
+`````Python
+x = 738
+print(x % 100)
+``````
+# Split a number
+`````Python
+seconds = 367
+minutes = seconds // 60
+remaining_seconds = seconds % 60
+print("Minutes:", minutes)
+print("Remaining Seconds:", remaining_seconds)
+``````
+`````Python
+number = 947
+last_digit = number % 10
+last_two_digits = number % 100
+complete_groups_of_100 = number // 100
+remaining_after_groups = number % 100
+print("Last Digit:", last_digit)
+print("Last Two Digits:", last_two_digits)
+print("Complete Groups of 100:", complete_groups_of_100)
+print("Remaining After Groups of 100:", remaining_after_groups)
+``````
