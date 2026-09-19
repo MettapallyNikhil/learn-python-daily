@@ -756,3 +756,37 @@ print("Last Two Digits:", last_two_digits)
 print("Complete Groups of 100:", complete_groups_of_100)
 print("Remaining After Groups of 100:", remaining_after_groups)
 ``````
+# 5.2 Boolean expressions (gives either True or False)
+`````Python
+print(10 == 10)
+print(type(10) == type(10.0))
+
+print(10 != 10)
+
+x = 15
+print(x > 10)
+
+x = 15
+print(x < 10)
+
+x = 10
+print(x >= 10)
+
+x = 8
+print(x <= 10)
+
+x = 20
+print(x == 20)
+print(x != 20)
+print(x > 15)
+print(x < 15)
+
+a = 25
+b = 30
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= 25)
+print(b <= 30)
+``````
