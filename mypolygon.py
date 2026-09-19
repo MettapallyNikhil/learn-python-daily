@@ -467,44 +467,78 @@
 # draw_spiral(bob, n=1000)
 # turtle.mainloop()
 
-# 5.1 Floor division and modulus
-a = 17
-b = 5
-print(a // b)  # floor division
-print(a % b)   # modulus
+# # 5.1 Floor division and modulus
+# a = 17
+# b = 5
+# print(a // b)  # floor division
+# print(a % b)   # modulus
 
-# A movie is 143 minutes long.
-a = 143
-print(a//60)  # number of hours
-print(a%60)   # number of minutes
+# # A movie is 143 minutes long.
+# a = 143
+# print(a//60)  # number of hours
+# print(a%60)   # number of minutes
 
-# Divisibility
+# # Divisibility
+# x = 20
+# print(x % 4)
+# print(x % 3)
+
+# # Find the Last Digit
+# x = 738
+# print(x % 10)
+
+# # Last Two Digits
+# x = 738
+# print(x % 100)
+
+# # Split a number
+# seconds = 367
+# minutes = seconds // 60
+# remaining_seconds = seconds % 60
+# print("Minutes:", minutes)
+# print("Remaining Seconds:", remaining_seconds)
+
+# # Split a number
+# number = 947
+# last_digit = number % 10
+# last_two_digits = number % 100
+# complete_groups_of_100 = number // 100
+# remaining_after_groups = number % 100
+# print("Last Digit:", last_digit)
+# print("Last Two Digits:", last_two_digits)
+# print("Complete Groups of 100:", complete_groups_of_100)
+# print("Remaining After Groups of 100:", remaining_after_groups)
+
+# 5.2 Boolean expressions (gives either True or False)
+
+print(10 == 10)
+print(type(10) == type(10.0))
+
+print(10 != 10)
+
+x = 15
+print(x > 10)
+
+x = 15
+print(x < 10)
+
+x = 10
+print(x >= 10)
+
+x = 8
+print(x <= 10)
+
 x = 20
-print(x % 4)
-print(x % 3)
+print(x == 20)
+print(x != 20)
+print(x > 15)
+print(x < 15)
 
-# Find the Last Digit
-x = 738
-print(x % 10)
-
-# Last Two Digits
-x = 738
-print(x % 100)
-
-# Split a number
-seconds = 367
-minutes = seconds // 60
-remaining_seconds = seconds % 60
-print("Minutes:", minutes)
-print("Remaining Seconds:", remaining_seconds)
-
-
-number = 947
-last_digit = number % 10
-last_two_digits = number % 100
-complete_groups_of_100 = number // 100
-remaining_after_groups = number % 100
-print("Last Digit:", last_digit)
-print("Last Two Digits:", last_two_digits)
-print("Complete Groups of 100:", complete_groups_of_100)
-print("Remaining After Groups of 100:", remaining_after_groups)
+a = 25
+b = 30
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= 25)
+print(b <= 30)
