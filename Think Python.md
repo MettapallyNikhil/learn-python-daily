@@ -790,3 +790,32 @@ print(a < b)
 print(a >= 25)
 print(b <= 30)
 ``````
+# 5.3 Logical operators  and, or, not
+`````Python
+x = 5
+print(x > 0 and x < 10)
+
+x = 15
+print(x < 10 or x == 15)
+
+x = 8
+print(not x > 10)
+
+x = 12
+print(x > 10 and x < 20)
+
+x = 7
+print(x < 5 or x > 10)
+
+x = 20
+print(not (x == 20))
+
+x = 12
+print(x > 5 and x < 10 or x == 12)
+
+x = 18
+print((x > 10 and x < 20) or x == 5)
+
+x = 15
+print(not (x < 10 or x > 20))
+``````
