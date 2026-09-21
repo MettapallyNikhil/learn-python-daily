@@ -819,3 +819,48 @@ print((x > 10 and x < 20) or x == 5)
 x = 15
 print(not (x < 10 or x > 20))
 ``````
+# 5.4 Conditional execution
+`````Python
+x = 10
+y = 20
+if x > 0:
+    print('x is positive')
+``````
+# 5.5 Alternative execution
+`````Python
+if x % 2 == 0:
+    print('x is even')
+else:
+    print('x is odd')
+``````
+# 5.6 Chained conditionals
+`````Python
+if x < y:
+    print('x is less than y')
+elif x > y:
+    print('x is greater than y')
+else:
+    print('x and y are equal')
+``````
+# 5.7 Nested conditionals
+`````Python
+if x == y:
+    print('x and y are equal')
+else:
+    if x < y:
+        print('x is less than y')
+    else:
+        print('x is greater than y')
+``````
+# 5.8 Recursion
+`````Python
+def countdown(n):
+    n = int(n)  # Ensure n is an integer
+    if n <= 0:
+        print('Blastoff!')
+    else:
+        print(n)
+        countdown(n-1)
+
+countdown(25)
+``````
