@@ -545,29 +545,69 @@
 
 # 5.3 Logical operators  and, or, not
  
-x = 5
-print(x > 0 and x < 10)
+# x = 5
+# print(x > 0 and x < 10)
 
-x = 15
-print(x < 10 or x == 15)
+# x = 15
+# print(x < 10 or x == 15)
 
-x = 8
-print(not x > 10)
+# x = 8
+# print(not x > 10)
 
-x = 12
-print(x > 10 and x < 20)
+# x = 12
+# print(x > 10 and x < 20)
 
-x = 7
-print(x < 5 or x > 10)
+# x = 7
+# print(x < 5 or x > 10)
 
-x = 20
-print(not (x == 20))
+# x = 20
+# print(not (x == 20))
 
-x = 12
-print(x > 5 and x < 10 or x == 12)
+# x = 12
+# print(x > 5 and x < 10 or x == 12)
 
-x = 18
-print((x > 10 and x < 20) or x == 5)
+# x = 18
+# print((x > 10 and x < 20) or x == 5)
 
-x = 15
-print(not (x < 10 or x > 20))
+# x = 15
+# print(not (x < 10 or x > 20))
+
+# 5.4 Conditional execution
+x = 10
+y = 20
+if x > 0:
+    print('x is positive')
+
+# 5.5 Alternative execution
+if x % 2 == 0:
+    print('x is even')
+else:
+    print('x is odd')
+
+# 5.6 Chained conditionals
+if x < y:
+    print('x is less than y')
+elif x > y:
+    print('x is greater than y')
+else:
+    print('x and y are equal')
+
+# 5.7 Nested conditionals
+if x == y:
+    print('x and y are equal')
+else:
+    if x < y:
+        print('x is less than y')
+    else:
+        print('x is greater than y')
+
+# 5.8 Recursion
+def countdown(n):
+    n = int(n)  # Ensure n is an integer
+    if n <= 0:
+        print('Blastoff!')
+    else:
+        print(n)
+        countdown(n-1)
+
+countdown(25)
