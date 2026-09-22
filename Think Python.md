@@ -864,3 +864,28 @@ def countdown(n):
 
 countdown(25)
 ``````
+# Exercise 5.1. 
+ 
+The time module provides a function, also named time, that returns the current
+Greenwich Mean Time in “the epoch”, which is an arbitrary time used as a reference point. On
+UNIX systems, the epoch is 1 January 1970.
+Write a script that reads the current time and converts it to a time of day in hours, minutes, and
+seconds, plus the number of days since the epoch.
+`````Python
+import time
+print(time.time())
+
+print("Current time in seconds since the epoch:", time.time())
+
+# Convert the current time to a time of day in hours, minutes, and seconds
+current_time = time.time()
+hours = int(current_time // 3600)
+minutes = int((current_time % 3600) // 60)
+seconds = int(current_time % 60)
+
+print(f"Current time: {hours:02d}:{minutes:02d}:{seconds:02d}")
+
+# Calculate the number of days since the epoch
+days = int(current_time // 86400)
+print(f"Days since the epoch: {days}")
+``````
