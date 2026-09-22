@@ -572,42 +572,68 @@
 # x = 15
 # print(not (x < 10 or x > 20))
 
-# 5.4 Conditional execution
-x = 10
-y = 20
-if x > 0:
-    print('x is positive')
+# # 5.4 Conditional execution
+# x = 10
+# y = 20
+# if x > 0:
+#     print('x is positive')
 
-# 5.5 Alternative execution
-if x % 2 == 0:
-    print('x is even')
-else:
-    print('x is odd')
+# # 5.5 Alternative execution
+# if x % 2 == 0:
+#     print('x is even')
+# else:
+#     print('x is odd')
 
-# 5.6 Chained conditionals
-if x < y:
-    print('x is less than y')
-elif x > y:
-    print('x is greater than y')
-else:
-    print('x and y are equal')
+# # 5.6 Chained conditionals
+# if x < y:
+#     print('x is less than y')
+# elif x > y:
+#     print('x is greater than y')
+# else:
+#     print('x and y are equal')
 
-# 5.7 Nested conditionals
-if x == y:
-    print('x and y are equal')
-else:
-    if x < y:
-        print('x is less than y')
-    else:
-        print('x is greater than y')
+# # 5.7 Nested conditionals
+# if x == y:
+#     print('x and y are equal')
+# else:
+#     if x < y:
+#         print('x is less than y')
+#     else:
+#         print('x is greater than y')
 
-# 5.8 Recursion
-def countdown(n):
-    n = int(n)  # Ensure n is an integer
-    if n <= 0:
-        print('Blastoff!')
-    else:
-        print(n)
-        countdown(n-1)
+# # 5.8 Recursion
+# def countdown(n):
+#     n = int(n)  # Ensure n is an integer
+#     if n <= 0:
+#         print('Blastoff!')
+#     else:
+#         print(n)
+#         countdown(n-1)
 
-countdown(25)
+# countdown(25)
+
+# Exercise 5.1. 
+ 
+# The time module provides a function, also named time, that returns the current
+# Greenwich Mean Time in “the epoch”, which is an arbitrary time used as a reference point. On
+# UNIX systems, the epoch is 1 January 1970.
+
+import time
+print(time.time())
+
+# Write a script that reads the current time and converts it to a time of day in hours, minutes, and
+# seconds, plus the number of days since the epoch.
+
+print("Current time in seconds since the epoch:", time.time())
+
+# Convert the current time to a time of day in hours, minutes, and seconds
+current_time = time.time()
+hours = int(current_time // 3600)
+minutes = int((current_time % 3600) // 60)
+seconds = int(current_time % 60)
+
+print(f"Current time: {hours:02d}:{minutes:02d}:{seconds:02d}")
+
+# Calculate the number of days since the epoch
+days = int(current_time // 86400)
+print(f"Days since the epoch: {days}")
