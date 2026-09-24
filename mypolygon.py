@@ -638,28 +638,54 @@
 # days = int(current_time // 86400)
 # print(f"Days since the epoch: {days}")
 
-# Exercise 5.2. 
+# # Exercise 5.2. 
 
-# Fermat’s Last Theorem says that there are no positive integers a, b, and c such that
-# a^n + b^n = c^n   
-# for any values of n greater than 2.
-# 1. Write a function named check_fermat that takes four parameters—a, b, c and n—and
-# checks to see if Fermat’s theorem holds. If n is greater than 2 and
-# a^n + b^n = c^n
-# the program should print, “Holy smokes, Fermat was wrong!” Otherwise the program should
-# print, “No, that doesn’t work.”
+# # Fermat’s Last Theorem says that there are no positive integers a, b, and c such that
+# # a^n + b^n = c^n   
+# # for any values of n greater than 2.
+# # 1. Write a function named check_fermat that takes four parameters—a, b, c and n—and
+# # checks to see if Fermat’s theorem holds. If n is greater than 2 and
+# # a^n + b^n = c^n
+# # the program should print, “Holy smokes, Fermat was wrong!” Otherwise the program should
+# # print, “No, that doesn’t work.”
 
-def check_fermat(a, b, c, n):
-    if n > 2 and a**n + b**n == c**n:
-        print("Holy smokes, Fermat was wrong!")
+# def check_fermat(a, b, c, n):
+#     if n > 2 and a**n + b**n == c**n:
+#         print("Holy smokes, Fermat was wrong!")
+#     else:
+#         print("No, that doesn't work.")
+
+# # 2. Write a function that prompts the user to input values for a, b, c and n, converts them to
+# # integers, and uses check_fermat to check whether they violate Fermat’s theorem.
+# def get_fermat_values():
+#     a = int(input("Enter a value for a: "))
+#     b = int(input("Enter a value for b: "))
+#     c = int(input("Enter a value for c: "))
+#     n = int(input("Enter a value for n: "))
+#     check_fermat(a, b, c, n)
+
+# Exercise 5.3. 
+
+# If you are given three sticks, you may or may not be able to arrange them in a triangle.
+# For example, if one of the sticks is 12 inches long and the other two are one inch long, you will not
+# be able to get the short sticks to meet in the middle. For any three lengths, there is a simple test to
+# see if it is possible to form a triangle:
+# If any of the three lengths is greater than the sum of the other two, then you cannot
+# form a triangle. Otherwise, you can. (If the sum of two lengths equals the third, they
+# form what is called a “degenerate” triangle.)
+# 1. Write a function named is_triangle that takes three integers as arguments, and that prints
+# either “Yes” or “No”, depending on whether you can or cannot form a triangle from sticks
+# with the given lengths.
+
+def is_triangle(a, b, c):
+    if a + b > c and a + c > b and b + c > a:
+        print("Yes")
     else:
-        print("No, that doesn't work.")
+        print("No")
 
-# 2. Write a function that prompts the user to input values for a, b, c and n, converts them to
-# integers, and uses check_fermat to check whether they violate Fermat’s theorem.
-def get_fermat_values():
-    a = int(input("Enter a value for a: "))
-    b = int(input("Enter a value for b: "))
-    c = int(input("Enter a value for c: "))
-    n = int(input("Enter a value for n: "))
-    check_fermat(a, b, c, n)
+# 2. Write a function that prompts the user to input three stick lengths, converts them to integers,
+# and uses is_triangle to check whether sticks with the given lengths can form a triangle.
+a = int(input("Enter the length of the first stick: "))
+b = int(input("Enter the length of the second stick: "))
+c = int(input("Enter the length of the third stick: "))
+is_triangle(a, b, c)
