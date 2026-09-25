@@ -943,3 +943,26 @@ b = int(input("Enter the length of the second stick: "))
 c = int(input("Enter the length of the third stick: "))
 is_triangle(a, b, c)
 ``````
+# Exercise 5.4. 
+
+# What is the output of the following program? Draw a stack diagram that shows the state of the program when it prints the result.
+`````Python
+def recurse(n, s):
+    if n == 0:
+        print(s)
+    else:
+        recurse(n-1, n+s)
+
+recurse(3, 0)
+``````
+# 1. What would happen if you called this function like this: recurse(-1, 0)?
+`````Python
+recurse(-1, 0)
+``````
+# 2. Write a docstring that explains everything someone would need to know in order to use this function (and nothing else).
+`````Python
+"""
+This function takes two arguments, n and s, and recursively calls itself with n-1 and n+s until n reaches 0, 
+at which point it prints the value of s.
+"""
+``````
