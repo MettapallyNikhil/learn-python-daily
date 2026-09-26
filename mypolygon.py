@@ -690,27 +690,47 @@
 # c = int(input("Enter the length of the third stick: "))
 # is_triangle(a, b, c)
 
-# Exercise 5.4. 
+# # Exercise 5.4. 
 
-# What is the output of the following program? Draw a stack diagram that shows the
-# state of the program when it prints the result.
-def recurse(n, s):
+# # What is the output of the following program? Draw a stack diagram that shows the
+# # state of the program when it prints the result.
+# def recurse(n, s):
+#     if n == 0:
+#         print(s)
+#     else:
+#         recurse(n-1, n+s)
+
+# recurse(3, 0)
+
+# # 1. What would happen if you called this function like this: recurse(-1, 0)?
+
+# recurse(-1, 0)
+
+# # 2. Write a docstring that explains everything someone would need to know in order to use this
+# # function (and nothing else).
+
+# """
+# This function takes two arguments, n and s, and recursively calls itself with n-1 and n+s until n reaches 0, 
+# at which point it prints the value of s.
+# """
+
+# Exercise 5.5. 
+
+# Read the following function and see if you can figure out what it does (see the examples in Chapter 4). 
+# Then run it and see if you got it right.
+import turtle
+
+def draw(t, length, n):
     if n == 0:
-        print(s)
-    else:
-        recurse(n-1, n+s)
-
-recurse(3, 0)
-
-# 1. What would happen if you called this function like this: recurse(-1, 0)?
-
-recurse(-1, 0)
-
-# 2. Write a docstring that explains everything someone would need to know in order to use this
-# function (and nothing else).
-
-"""
-This function takes two arguments, n and s, and recursively calls itself with n-1 and n+s until n reaches 0, 
-at which point it prints the value of s.
-"""
-
+        return
+    angle = 50
+    t.fd(length * n)
+    t.lt(angle)
+    draw(t, length, n - 1)
+    t.rt(2 * angle)
+    draw(t, length, n - 1)
+    t.lt(angle)
+    t.bk(length * n)
+bob = turtle.Turtle()
+draw(bob, 20, 3)
+turtle.mainloop()
