@@ -1022,7 +1022,6 @@ turtle.mainloop()
 ``````
 2. Write a function called snowflake that draws three Koch curves to make the outline of a
 snowflake.
-Solution: https: // thinkpython. com/ code/ koch. py .
 `````Python
 
 from __future__ import print_function, division
