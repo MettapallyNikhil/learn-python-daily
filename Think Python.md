@@ -1060,3 +1060,27 @@ snowflake(bob, 300)
 
 turtle.mainloop()
 ``````
+
+# 6.1 Void function
+`````Python
+import math
+
+def hello():
+    print("Hello")
+``````
+# fruitful function
+`````Python
+def area(radius):
+    return math.pi * radius ** 2
+
+result = area(5)
+``````
+# Exercise 1 — Simple return
+`````Python
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+
+print(result)
+``````
