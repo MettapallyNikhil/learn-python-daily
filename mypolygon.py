@@ -735,75 +735,97 @@
 # draw(bob, 20, 3)
 # turtle.mainloop()
 
-Exercise 5.6. 
+# Exercise 5.6. 
 
-The Koch curve is a fractal that looks something like Figure 5.2. To draw a Koch
-curve with length x, all you have to do is
-1. Draw a Koch curve with length x/3.
-2. Turn left 60 degrees.
-3. Draw a Koch curve with length x/3.
-4. Turn right 120 degrees.
-5. Draw a Koch curve with length x/3.
-6. Turn left 60 degrees.
-7. Draw a Koch curve with length x/3.
-The exception is if x is less than 3: in that case, you can just draw a straight line with length x.
-1. Write a function called koch that takes a turtle and a length as parameters, and that uses the
-turtle to draw a Koch curve with the given length.
+# The Koch curve is a fractal that looks something like Figure 5.2. To draw a Koch
+# curve with length x, all you have to do is
+# 1. Draw a Koch curve with length x/3.
+# 2. Turn left 60 degrees.
+# 3. Draw a Koch curve with length x/3.
+# 4. Turn right 120 degrees.
+# 5. Draw a Koch curve with length x/3.
+# 6. Turn left 60 degrees.
+# 7. Draw a Koch curve with length x/3.
+# The exception is if x is less than 3: in that case, you can just draw a straight line with length x.
+# 1. Write a function called koch that takes a turtle and a length as parameters, and that uses the
+# turtle to draw a Koch curve with the given length.
 
-import turtle
+# import turtle
 
-def koch(t, x):
-    if x < 3:
-        t.fd(x)
-    else:
-        koch(t, x/3)
-        t.lt(60)
-        koch(t, x/3)
-        t.rt(120)
-        koch(t, x/3)
-        t.lt(60)
-        koch(t, x/3)
+# def koch(t, x):
+#     if x < 3:
+#         t.fd(x)
+#     else:
+#         koch(t, x/3)
+#         t.lt(60)
+#         koch(t, x/3)
+#         t.rt(120)
+#         koch(t, x/3)
+#         t.lt(60)
+#         koch(t, x/3)
 
-bob = turtle.Turtle()
-koch(bob, 100)
-turtle.mainloop()
+# bob = turtle.Turtle()
+# koch(bob, 100)
+# turtle.mainloop()
 
-2. Write a function called snowflake that draws three Koch curves to make the outline of a
-snowflake.
-Solution: https: // thinkpython. com/ code/ koch. py .
+# 2. Write a function called snowflake that draws three Koch curves to make the outline of a
+# snowflake.
+# Solution: https: // thinkpython. com/ code/ koch. py .
 
-from __future__ import print_function, division
+# from __future__ import print_function, division
 
-import turtle
-
-
-def koch(t, n):
-    """Draws a koch curve with length n."""
-    if n < 10:
-        t.fd(n)
-        return
-    m = n/3
-    koch(t, m)
-    t.lt(60)
-    koch(t, m)
-    t.rt(120)
-    koch(t, m)
-    t.lt(60)
-    koch(t, m)
+# import turtle
 
 
-def snowflake(t, n):
-    """Draws a snowflake (a triangle with a Koch curve for each side)."""
-    for i in range(3):
-        koch(t, n)
-        t.rt(120)
+# def koch(t, n):
+#     """Draws a koch curve with length n."""
+#     if n < 10:
+#         t.fd(n)
+#         return
+#     m = n/3
+#     koch(t, m)
+#     t.lt(60)
+#     koch(t, m)
+#     t.rt(120)
+#     koch(t, m)
+#     t.lt(60)
+#     koch(t, m)
 
 
-bob = turtle.Turtle()
+# def snowflake(t, n):
+#     """Draws a snowflake (a triangle with a Koch curve for each side)."""
+#     for i in range(3):
+#         koch(t, n)
+#         t.rt(120)
 
-bob.pu()
-bob.goto(-150, 90)
-bob.pd()
-snowflake(bob, 300)
 
-turtle.mainloop()
+# bob = turtle.Turtle()
+
+# bob.pu()
+# bob.goto(-150, 90)
+# bob.pd()
+# snowflake(bob, 300)
+
+# turtle.mainloop()
+
+# Fruitful Funciton
+
+# Void function
+import math
+
+def hello():
+    print("Hello")
+
+# fruitful function
+def area(radius):
+    return math.pi * radius ** 2
+
+result = area(5)
+
+# Exercise 1 — Simple return
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+
+print(result)
