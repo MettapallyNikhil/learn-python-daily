@@ -1084,3 +1084,18 @@ result = add(5, 3)
 
 print(result)
 ``````
+# Understanding return
+`````Python
+def double(x):
+    return x * 2
+
+print(double(7))
+``````
+# Return vs Print
+`````Python
+def square(x):
+    return x ** 2
+
+result = square(4)
+
+print(result)
