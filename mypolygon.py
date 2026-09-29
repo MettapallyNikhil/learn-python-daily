@@ -808,24 +808,40 @@
 
 # turtle.mainloop()
 
-# Fruitful Funciton
+# # Fruitful Funciton
 
-# Void function
-import math
+# # Void function
+# import math
 
-def hello():
-    print("Hello")
+# def hello():
+#     print("Hello")
 
-# fruitful function
-def area(radius):
-    return math.pi * radius ** 2
+# # fruitful function
+# def area(radius):
+#     return math.pi * radius ** 2
 
-result = area(5)
+# result = area(5)
 
-# Exercise 1 — Simple return
-def add(a, b):
-    return a + b
+# # Exercise 1 — Simple return
+# def add(a, b):
+#     return a + b
 
-result = add(5, 3)
+# result = add(5, 3)
+
+# print(result)
+
+# Understanding return
+
+def double(x):
+    return x * 2
+
+print(double(7))
+
+# Return vs Print
+
+def square(x):
+    return x ** 2
+
+result = square(4)
 
 print(result)
