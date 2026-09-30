@@ -1101,6 +1101,7 @@ result = square(4)
 print(result)
 ``````
 # Absolute Value
+
 `````Python
 def absolute_value(x):
     if x < 0:
@@ -1112,6 +1113,7 @@ print(absolute_value(-5))  # Output: 5
 print(absolute_value(3))   # Output: 3
 ``````
 # Compare Function
+
 `````Python
 def compare(x, y):
     if x < y:
