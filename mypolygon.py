@@ -830,18 +830,41 @@
 
 # print(result)
 
-# Understanding return
+# # Understanding return
 
-def double(x):
-    return x * 2
+# def double(x):
+#     return x * 2
 
-print(double(7))
+# print(double(7))
 
-# Return vs Print
+# # Return vs Print
 
-def square(x):
-    return x ** 2
+# def square(x):
+#     return x ** 2
 
-result = square(4)
+# result = square(4)
 
-print(result)
+# print(result)
+
+# Absolute Value
+def absolute_value(x):
+    if x < 0:
+        return -x
+    else:
+        return x
+
+print(absolute_value(-5))  # Output: 5
+print(absolute_value(3))   # Output: 3
+
+# Compare Function
+def compare(x, y):
+    if x < y:
+        return -1   
+    elif x > y:
+        return 1
+    else:
+        return 0
+
+print(compare(3, 5))  # Output: -1
+print(compare(7, 2))  # Output: 1   
+print(compare(4, 4))  # Output: 0
