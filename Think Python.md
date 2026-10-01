@@ -1127,3 +1127,22 @@ print(compare(3, 5))  # Output: -1
 print(compare(7, 2))  # Output: 1   
 print(compare(4, 4))  # Output: 0
 ``````
+# Incremental development
+`````Python
+import math
+
+def distance(x1, y1, x2, y2):
+    """Calculates the distance between two points."""
+    dx = x2 - x1
+    dy = y2 - y1
+
+    print(f"dx: {dx}, dy: {dy}")
+    dsquared = dx**2 + dy**2
+    print(f"dsquared: {dsquared}")
+    result = math.sqrt(dsquared)
+    print(f"result: {result}")
+    return result
+
+x2 = distance(1, 2, 4, 6)
+print(f"Distance: {x2}")
+``````
