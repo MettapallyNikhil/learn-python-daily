@@ -846,25 +846,44 @@
 
 # print(result)
 
-# Absolute Value
-def absolute_value(x):
-    if x < 0:
-        return -x
-    else:
-        return x
+# # Absolute Value
+# def absolute_value(x):
+#     if x < 0:
+#         return -x
+#     else:
+#         return x
 
-print(absolute_value(-5))  # Output: 5
-print(absolute_value(3))   # Output: 3
+# print(absolute_value(-5))  # Output: 5
+# print(absolute_value(3))   # Output: 3
 
-# Compare Function
-def compare(x, y):
-    if x < y:
-        return -1   
-    elif x > y:
-        return 1
-    else:
-        return 0
+# # Compare Function
+# def compare(x, y):
+#     if x < y:
+#         return -1   
+#     elif x > y:
+#         return 1
+#     else:
+#         return 0
 
-print(compare(3, 5))  # Output: -1
-print(compare(7, 2))  # Output: 1   
-print(compare(4, 4))  # Output: 0
+# print(compare(3, 5))  # Output: -1
+# print(compare(7, 2))  # Output: 1   
+# print(compare(4, 4))  # Output: 0
+
+# Incremental development
+
+import math
+
+def distance(x1, y1, x2, y2):
+    """Calculates the distance between two points."""
+    dx = x2 - x1
+    dy = y2 - y1
+
+    print(f"dx: {dx}, dy: {dy}")
+    dsquared = dx**2 + dy**2
+    print(f"dsquared: {dsquared}")
+    result = math.sqrt(dsquared)
+    print(f"result: {result}")
+    return result
+
+x2 = distance(1, 2, 4, 6)
+print(f"Distance: {x2}")
