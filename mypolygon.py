@@ -871,19 +871,38 @@
 
 # Incremental development
 
+# import math
+
+# def distance(x1, y1, x2, y2):
+#     """Calculates the distance between two points."""
+#     dx = x2 - x1
+#     dy = y2 - y1
+
+#     print(f"dx: {dx}, dy: {dy}")
+#     dsquared = dx**2 + dy**2
+#     print(f"dsquared: {dsquared}")
+#     result = math.sqrt(dsquared)
+#     print(f"result: {result}")
+#     return result
+
+# x2 = distance(1, 2, 4, 6)
+# print(f"Distance: {x2}")
+
+# Composition
+
 import math
 
-def distance(x1, y1, x2, y2):
-    """Calculates the distance between two points."""
-    dx = x2 - x1
-    dy = y2 - y1
+def area(radius):
+    return math.pi * radius ** 2
 
-    print(f"dx: {dx}, dy: {dy}")
-    dsquared = dx**2 + dy**2
-    print(f"dsquared: {dsquared}")
-    result = math.sqrt(dsquared)
-    print(f"result: {result}")
+def circle_area(xc, yc, xp, yp):
+    dx = xp - xc
+    dy = yp - yc
+    radius = math.sqrt(dx ** 2 + dy ** 2)
+    print(f"Radius: {radius}")
+    result = area(radius)
+    print(f"Area: {result}")
     return result
 
-x2 = distance(1, 2, 4, 6)
-print(f"Distance: {x2}")
+area_result = circle_area(1, 2, 4, 6)
+print(f"Circle Area: {area_result}")
