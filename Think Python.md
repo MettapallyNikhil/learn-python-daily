@@ -1146,3 +1146,22 @@ def distance(x1, y1, x2, y2):
 x2 = distance(1, 2, 4, 6)
 print(f"Distance: {x2}")
 ``````
+# Composition
+
+import math
+
+def area(radius):
+    return math.pi * radius ** 2
+
+def circle_area(xc, yc, xp, yp):
+    dx = xp - xc
+    dy = yp - yc
+    radius = math.sqrt(dx ** 2 + dy ** 2)
+    print(f"Radius: {radius}")
+    result = area(radius)
+    print(f"Area: {result}")
+    return result
+
+area_result = circle_area(1, 2, 4, 6)
+print(f"Circle Area: {area_result}")
+``````
