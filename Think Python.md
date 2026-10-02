@@ -1147,7 +1147,7 @@ x2 = distance(1, 2, 4, 6)
 print(f"Distance: {x2}")
 ``````
 # Composition
-
+`````Python
 import math
 
 def area(radius):
