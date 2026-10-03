@@ -890,19 +890,32 @@
 
 # Composition
 
-import math
+# import math
 
-def area(radius):
-    return math.pi * radius ** 2
+# def area(radius):
+#     return math.pi * radius ** 2
 
-def circle_area(xc, yc, xp, yp):
-    dx = xp - xc
-    dy = yp - yc
-    radius = math.sqrt(dx ** 2 + dy ** 2)
-    print(f"Radius: {radius}")
-    result = area(radius)
-    print(f"Area: {result}")
-    return result
+# def circle_area(xc, yc, xp, yp):
+#     dx = xp - xc
+#     dy = yp - yc
+#     radius = math.sqrt(dx ** 2 + dy ** 2)
+#     print(f"Radius: {radius}")
+#     result = area(radius)
+#     print(f"Area: {result}")
+#     return result
 
-area_result = circle_area(1, 2, 4, 6)
-print(f"Circle Area: {area_result}")
+# area_result = circle_area(1, 2, 4, 6)
+# print(f"Circle Area: {area_result}")
+
+# Boolean functions - Functions can return booleans, which is often convenient for hiding complicated tests inside functions
+def is_divisible(x, y):
+    """Checks if x is divisible by y."""
+    if x % y == 0:
+        return True
+    else:
+        return False
+
+x = 10
+y = 2
+if is_divisible(x, y):
+    print(f"{x} is divisible by {y}")
