@@ -1165,3 +1165,17 @@ def circle_area(xc, yc, xp, yp):
 area_result = circle_area(1, 2, 4, 6)
 print(f"Circle Area: {area_result}")
 ``````
+# Boolean functions - Functions can return booleans, which is often convenient for hiding complicated tests inside functions
+`````Python
+def is_divisible(x, y):
+    """Checks if x is divisible by y."""
+    if x % y == 0:
+        return True
+    else:
+        return False
+
+x = 10
+y = 2
+if is_divisible(x, y):
+    print(f"{x} is divisible by {y}")
+``````
