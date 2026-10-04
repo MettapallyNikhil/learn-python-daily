@@ -907,15 +907,30 @@
 # area_result = circle_area(1, 2, 4, 6)
 # print(f"Circle Area: {area_result}")
 
-# Boolean functions - Functions can return booleans, which is often convenient for hiding complicated tests inside functions
-def is_divisible(x, y):
-    """Checks if x is divisible by y."""
-    if x % y == 0:
-        return True
-    else:
-        return False
+# # Boolean functions - Functions can return booleans, which is often convenient for hiding complicated tests inside functions
+# def is_divisible(x, y):
+#     """Checks if x is divisible by y."""
+#     if x % y == 0:
+#         return True
+#     else:
+#         return False
 
-x = 10
-y = 2
-if is_divisible(x, y):
-    print(f"{x} is divisible by {y}")
+# x = 10
+# y = 2
+# if is_divisible(x, y):
+#     print(f"{x} is divisible by {y}")
+
+# More recursion
+
+from unittest import result
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        recurse = factorial(n-1)
+    result = n * recurse
+    print(f"Factorial of {n}: {result}")
+    return result
+
+print(factorial(5))  # Output: 1
