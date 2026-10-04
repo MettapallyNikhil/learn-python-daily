@@ -1195,6 +1195,6 @@ def factorial(n):
     print(f"Factorial of {n}: {result}")
     return result
 
-print(factorial(5))  # Output: 1
+print(factorial(5)) 
 ``````
 <img width="507" height="255" alt="image" src="https://github.com/user-attachments/assets/6a32a25c-900e-4b8a-85b6-222b9b7a0f92" />
