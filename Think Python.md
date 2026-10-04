@@ -1182,3 +1182,6 @@ y = 2
 if is_divisible(x, y):
     print(f"{x} is divisible by {y}")
 ``````
+
+
+<img width="507" height="255" alt="image" src="https://github.com/user-attachments/assets/6a32a25c-900e-4b8a-85b6-222b9b7a0f92" />
