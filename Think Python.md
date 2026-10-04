@@ -1182,6 +1182,19 @@ y = 2
 if is_divisible(x, y):
     print(f"{x} is divisible by {y}")
 ``````
+# More recursion
+`````Python
+from unittest import result
 
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        recurse = factorial(n-1)
+    result = n * recurse
+    print(f"Factorial of {n}: {result}")
+    return result
 
+print(factorial(5))  # Output: 1
+``````
 <img width="507" height="255" alt="image" src="https://github.com/user-attachments/assets/6a32a25c-900e-4b8a-85b6-222b9b7a0f92" />
