@@ -1198,3 +1198,29 @@ def factorial(n):
 print(factorial(5)) 
 ``````
 <img width="507" height="255" alt="image" src="https://github.com/user-attachments/assets/6a32a25c-900e-4b8a-85b6-222b9b7a0f92" />
+
+# Exercise 6.1. 
+
+Draw a stack diagram for the following program. What does the program print?
+`````Python
+from numpy import prod, square
+
+def b(z):
+    prod = a(z, z)
+    print(z, prod)
+    return prod
+
+def a(x, y):
+    x = x + 1
+    return x * y
+
+def c(x, y, z):
+    total = x + y + z
+    square = b(total)**2
+    return square
+    return square
+
+x = 1
+y = x + 1
+print(c(x, y+3, x+y))
+``````
