@@ -920,17 +920,42 @@
 # if is_divisible(x, y):
 #     print(f"{x} is divisible by {y}")
 
-# More recursion
+# # More recursion
 
-from unittest import result
+# from unittest import result
 
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        recurse = factorial(n-1)
-    result = n * recurse
-    print(f"Factorial of {n}: {result}")
-    return result
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         recurse = factorial(n-1)
+#     result = n * recurse
+#     print(f"Factorial of {n}: {result}")
+#     return result
 
-print(factorial(5))  # Output: 1
+# print(factorial(5))  # Output: 1
+
+# Exercise 6.1. 
+
+# Draw a stack diagram for the following program. What does the program print?
+
+from numpy import prod, square
+
+def b(z):
+    prod = a(z, z)
+    print(z, prod)
+    return prod
+
+def a(x, y):
+    x = x + 1
+    return x * y
+
+def c(x, y, z):
+    total = x + y + z
+    square = b(total)**2
+    return square
+    return square
+
+x = 1
+y = x + 1
+print(c(x, y+3, x+y))
