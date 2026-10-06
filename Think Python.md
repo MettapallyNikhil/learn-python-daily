@@ -1228,18 +1228,18 @@ print(c(x, y+3, x+y))
 
 # 7.1 Reassignment
 `````Python
-# a = 5
-# b = a # a and b are now equal
-# a = 3 # a and b are no longer equal
+a = 5
+b = a # a and b are now equal
+a = 3 # a and b are no longer equal
 
-# print(b) # Output: 5
+print(b) # Output: 5
 ``````
 # 7.2 Updating variables
 `````Python
-# x = 0
-# x = x + 1
+x = 0
+x = x + 1
 
-# print(x)  # Output: 1
+print(x)  # Output: 1
 ``````
 # 7.3 The while statement
 `````Python
