@@ -1224,3 +1224,35 @@ x = 1
 y = x + 1
 print(c(x, y+3, x+y))
 ``````
+# Iteration
+
+# 7.1 Reassignment
+`````Python
+# a = 5
+# b = a # a and b are now equal
+# a = 3 # a and b are no longer equal
+
+# print(b) # Output: 5
+``````
+# 7.2 Updating variables
+`````Python
+# x = 0
+# x = x + 1
+
+# print(x)  # Output: 1
+``````
+# 7.3 The while statement
+`````Python
+def sequence(n):
+    while n!= 1:
+        print(n)
+
+        if n % 2 == 0:      # n is even
+            n = n/2
+        else:               # n is odd
+            n = n*3 + 1
+
+    return n
+
+print(sequence(7))
+``````
