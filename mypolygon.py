@@ -939,23 +939,55 @@
 
 # Draw a stack diagram for the following program. What does the program print?
 
-from numpy import prod, square
+# from numpy import prod, square
 
-def b(z):
-    prod = a(z, z)
-    print(z, prod)
-    return prod
+# def b(z):
+#     prod = a(z, z)
+#     print(z, prod)
+#     return prod
 
-def a(x, y):
-    x = x + 1
-    return x * y
+# def a(x, y):
+#     x = x + 1
+#     return x * y
 
-def c(x, y, z):
-    total = x + y + z
-    square = b(total)**2
-    return square
-    return square
+# def c(x, y, z):
+#     total = x + y + z
+#     square = b(total)**2
+#     return square
+#     return square
 
-x = 1
-y = x + 1
-print(c(x, y+3, x+y))
+# x = 1
+# y = x + 1
+# print(c(x, y+3, x+y))
+
+# Iteration
+
+# 7.1 Reassignment
+
+# a = 5
+# b = a # a and b are now equal
+# a = 3 # a and b are no longer equal
+
+# print(b) # Output: 5
+
+# 7.2 Updating variables
+
+# x = 0
+# x = x + 1
+
+# print(x)  # Output: 1
+
+# 7.3 The while statement
+
+def sequence(n):
+    while n!= 1:
+        print(n)
+
+        if n % 2 == 0:      # n is even
+            n = n/2
+        else:               # n is odd
+            n = n*3 + 1
+
+    return n
+
+print(sequence(7))  # Output: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1
