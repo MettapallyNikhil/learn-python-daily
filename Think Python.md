@@ -1256,3 +1256,20 @@ def sequence(n):
 
 print(sequence(7))
 ``````
+# 7.4 break
+`````Python
+while True:
+    line = input('> ')
+    print(line)
+    if line == 'done':
+        break
+print(line)
+print('Done!')
+``````
+# 7.5 Square roots
+`````Python
+a = 4
+x = 3
+y = (x + a/x) / 2
+print(y)
+``````
