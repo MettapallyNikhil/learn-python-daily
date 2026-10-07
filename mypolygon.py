@@ -979,15 +979,33 @@
 
 # 7.3 The while statement
 
-def sequence(n):
-    while n!= 1:
-        print(n)
+# def sequence(n):
+#     while n!= 1:
+#         print(n)
 
-        if n % 2 == 0:      # n is even
-            n = n/2
-        else:               # n is odd
-            n = n*3 + 1
+#         if n % 2 == 0:      # n is even
+#             n = n/2
+#         else:               # n is odd
+#             n = n*3 + 1
 
-    return n
+#     return n
 
-print(sequence(7))  # Output: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1
+# print(sequence(7))  # Output: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1
+
+# 7.4 break
+
+while True:
+    line = input('> ')
+    print(line)
+    if line == 'done':
+        break
+print(line)
+print('Done!')
+
+# 7.5 Square roots
+
+a = 4
+x = 3
+y = (x + a/x) / 2
+print(y)
+
