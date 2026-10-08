@@ -992,20 +992,67 @@
 
 # print(sequence(7))  # Output: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1
 
-# 7.4 break
+# # 7.4 break
 
-while True:
-    line = input('> ')
-    print(line)
-    if line == 'done':
-        break
-print(line)
-print('Done!')
+# while True:
+#     line = input('> ')
+#     print(line)
+#     if line == 'done':
+#         break
+# print(line)
+# print('Done!')
 
-# 7.5 Square roots
+# # 7.5 Square roots
 
-a = 4
-x = 3
-y = (x + a/x) / 2
-print(y)
+# a = 4
+# x = 3
+# y = (x + a/x) / 2
+# print(y)
 
+# Exercise
+
+The mathematician Srinivasa Ramanujan found an infinite series that can be used to
+generate a numerical approximation of π. The formula is:
+π = (2√2/9801) * Σ(4k)! * (1103 + 26390k) / (k!)^4 * 396^(4k)
+Write a function called estimate_pi that uses this formula to compute and return an estimate of
+π. It should use a while loop to compute terms of the summation until the last term is smaller than
+1e-15 (which is Python notation for 10−15). You can check the result by comparing it to math.pi.
+
+from __future__ import print_function, division
+
+import math
+
+
+def factorial(n):
+    """Computes factorial of n recursively."""
+    if n == 0:
+        return 1
+    else:
+        recurse = factorial(n-1)
+        result = n * recurse
+        return result
+
+
+def estimate_pi():
+    """Computes an estimate of pi.
+
+    Algorithm due to Srinivasa Ramanujan, from 
+    http://en.wikipedia.org/wiki/Pi
+    """
+    total = 0
+    k = 0
+    factor = 2 * math.sqrt(2) / 9801
+    while True:
+        num = factorial(4*k) * (1103 + 26390*k)
+        den = factorial(k)**4 * 396**(4*k)
+        
+        total += num / den
+        term = factor * num/den
+        
+        if abs(term) < 1e-15:
+            break
+        k += 1
+    
+    return 1 / (factor * total)
+
+print(estimate_pi())
