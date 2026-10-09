@@ -1321,3 +1321,15 @@ def estimate_pi():
 
 print(estimate_pi())
 ``````
+# Strings
+`````Python
+prefixes = 'JKLMNOPQ'
+suffix = 'ack'
+
+for letter in prefixes:
+    print(letter + suffix)
+``````
+fruit= 'banana'
+fruit[0]  # 'b'
+fruit[1]  # 'a'
+fruit[2:5]  # 'nana'
