@@ -1011,48 +1011,61 @@
 
 # Exercise
 
-The mathematician Srinivasa Ramanujan found an infinite series that can be used to
-generate a numerical approximation of π. The formula is:
-π = (2√2/9801) * Σ(4k)! * (1103 + 26390k) / (k!)^4 * 396^(4k)
-Write a function called estimate_pi that uses this formula to compute and return an estimate of
-π. It should use a while loop to compute terms of the summation until the last term is smaller than
-1e-15 (which is Python notation for 10−15). You can check the result by comparing it to math.pi.
+# The mathematician Srinivasa Ramanujan found an infinite series that can be used to
+# generate a numerical approximation of π. The formula is:
+# π = (2√2/9801) * Σ(4k)! * (1103 + 26390k) / (k!)^4 * 396^(4k)
+# Write a function called estimate_pi that uses this formula to compute and return an estimate of
+# π. It should use a while loop to compute terms of the summation until the last term is smaller than
+# 1e-15 (which is Python notation for 10−15). You can check the result by comparing it to math.pi.
 
-from __future__ import print_function, division
+# from __future__ import print_function, division
 
-import math
-
-
-def factorial(n):
-    """Computes factorial of n recursively."""
-    if n == 0:
-        return 1
-    else:
-        recurse = factorial(n-1)
-        result = n * recurse
-        return result
+# import math
 
 
-def estimate_pi():
-    """Computes an estimate of pi.
+# def factorial(n):
+#     """Computes factorial of n recursively."""
+#     if n == 0:
+#         return 1
+#     else:
+#         recurse = factorial(n-1)
+#         result = n * recurse
+#         return result
 
-    Algorithm due to Srinivasa Ramanujan, from 
-    http://en.wikipedia.org/wiki/Pi
-    """
-    total = 0
-    k = 0
-    factor = 2 * math.sqrt(2) / 9801
-    while True:
-        num = factorial(4*k) * (1103 + 26390*k)
-        den = factorial(k)**4 * 396**(4*k)
+
+# def estimate_pi():
+#     """Computes an estimate of pi.
+
+#     Algorithm due to Srinivasa Ramanujan, from 
+#     http://en.wikipedia.org/wiki/Pi
+#     """
+#     total = 0
+#     k = 0
+#     factor = 2 * math.sqrt(2) / 9801
+#     while True:
+#         num = factorial(4*k) * (1103 + 26390*k)
+#         den = factorial(k)**4 * 396**(4*k)
         
-        total += num / den
-        term = factor * num/den
+#         total += num / den
+#         term = factor * num/den
         
-        if abs(term) < 1e-15:
-            break
-        k += 1
+#         if abs(term) < 1e-15:
+#             break
+#         k += 1
     
-    return 1 / (factor * total)
+#     return 1 / (factor * total)
 
-print(estimate_pi())
+# print(estimate_pi())
+
+# Strings
+
+prefixes = 'JKLMNOPQ'
+suffix = 'ack'
+
+for letter in prefixes:
+    print(letter + suffix)
+
+fruit= 'banana'
+fruit[0]  # 'b'
+fruit[1]  # 'a'
+fruit[2:5]  # 'nana'
