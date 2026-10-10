@@ -1059,13 +1059,41 @@
 
 # Strings
 
-prefixes = 'JKLMNOPQ'
-suffix = 'ack'
+# prefixes = 'JKLMNOPQ'
+# suffix = 'ack'
 
-for letter in prefixes:
-    print(letter + suffix)
+# for letter in prefixes:
+#     print(letter + suffix)
 
-fruit= 'banana'
-fruit[0]  # 'b'
-fruit[1]  # 'a'
-fruit[2:5]  # 'nana'
+# fruit= 'banana'
+# fruit[0]  # 'b'
+# fruit[1]  # 'a'
+# fruit[2:5]  # 'nana'
+
+greeting = 'Hello, world!'
+new_greeting = 'J' + greeting[1:]
+
+print(new_greeting)
+
+word = 'banana'
+count = 0
+for letter in word:
+    if letter == 'a':
+        count = count + 1
+
+print(count)
+
+word = 'banana'
+new_word = word.upper()
+
+print(new_word)
+
+word = input('Enter a word: ')
+
+if word < 'banana':
+    print('Your word, ' + word + ', comes before banana.')
+elif word > 'banana':
+    print('Your word, ' + word + ', comes after banana.')
+else:
+    print('All right, bananas.')
+
