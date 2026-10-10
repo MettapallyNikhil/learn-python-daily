@@ -1336,13 +1336,13 @@ fruit[1]  # 'a'
 fruit[2:5]  # 'nana'
 ``````
 
-
+`````Python
 greeting = 'Hello, world!'
 new_greeting = 'J' + greeting[1:]
 
 print(new_greeting)
 ``````
-
+`````Python
 word = 'banana'
 count = 0
 for letter in word:
@@ -1351,13 +1351,13 @@ for letter in word:
 
 print(count)
 ``````
-
+`````Python
 word = 'banana'
 new_word = word.upper()
 
 print(new_word)
 ``````
-
+`````Python
 word = input('Enter a word: ')
 
 if word < 'banana':
