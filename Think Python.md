@@ -1420,7 +1420,7 @@ empty = []
 
 print(cheeses, numbers, empty)
 ``````
-# in operator
+# Lists and in operator
 ``````Python
 cheeses = ['Cheddar', 'Edam', 'Gouda']
 print('Edam' in cheeses)
