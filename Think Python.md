@@ -1412,3 +1412,17 @@ def any_lowercase5(s):
 
 print(any_lowercase5('Hello'))  # Output: False
 ``````
+# Lists
+``````Python
+cheeses = ['Cheddar', 'Edam', 'Gouda']
+numbers = [42, 123]
+empty = []
+
+print(cheeses, numbers, empty)
+``````
+# in operator
+``````Python
+cheeses = ['Cheddar', 'Edam', 'Gouda']
+print('Edam' in cheeses)
+print('Brie' in cheeses)
+``````
