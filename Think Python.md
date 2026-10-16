@@ -1426,3 +1426,34 @@ cheeses = ['Cheddar', 'Edam', 'Gouda']
 print('Edam' in cheeses)
 print('Brie' in cheeses)
 ``````
+
+# List operations
+``````Python
+
+a = [1, 2, 3]
+b = [4, 5, 6]
+print(a + b)  # Output: [1, 2, 3, 4, 5, 6]
+
+a = [0] * 3
+print(a)  # Output: [0, 0, 0]
+``````
+# List slices
+``````Python
+
+a = ['a', 'b', 'c', 'd', 'e']
+print(a[3:])
+print(a[:3])
+print(a[1:4])
+``````
+# List methods
+``````Python
+
+t = ['a', 'b', 'c']
+t.append('d')
+print(t)
+
+t = ['d', 'c', 'e', 'b', 'a']
+t.sort()
+print(t)
+``````
+
