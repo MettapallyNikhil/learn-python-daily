@@ -1471,7 +1471,7 @@ print(t) # Output: ['a', 'c']
 t = ['a', 'b', 'c', 'd', 'e', 'f']
 del t[1:5]
 print(t) # Output: ['a', 'f']
-
+``````
 # Lists and strings
 ``````Python
 s = 'spam'
@@ -1482,7 +1482,7 @@ s = 'spam-spam-spam'
 delimiter = '-'
 t = s.split(delimiter)
 print(t) # Output: ['spam', 'spam', 'spam']
-
+``````
 # Objects and values
 ``````Python
 a = 'banana'
@@ -1492,3 +1492,4 @@ print(a is b) # Output: True
 a = [1, 2, 3]
 b = [1, 2, 3]
 print(a is b) # Output: False
+``````
