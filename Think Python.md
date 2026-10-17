@@ -1458,7 +1458,7 @@ print(t)
 ``````
 
 
-#Deleting elements
+# Deleting elements
 ``````Python
 t = ['a', 'b', 'c']
 del t[1]
