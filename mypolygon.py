@@ -1155,29 +1155,63 @@
 # print('Edam' in cheeses)
 # print('Brie' in cheeses)
 
-# List operations
+# # List operations
 
-a = [1, 2, 3]
-b = [4, 5, 6]
-print(a + b)  # Output: [1, 2, 3, 4, 5, 6]
+# a = [1, 2, 3]
+# b = [4, 5, 6]
+# print(a + b)  # Output: [1, 2, 3, 4, 5, 6]
 
-a = [0] * 3
-print(a)  # Output: [0, 0, 0]
+# a = [0] * 3
+# print(a)  # Output: [0, 0, 0]
 
-# List slices
+# # List slices
 
-a = ['a', 'b', 'c', 'd', 'e']
-print(a[3:])
-print(a[:3])
-print(a[1:4])
+# a = ['a', 'b', 'c', 'd', 'e']
+# print(a[3:])
+# print(a[:3])
+# print(a[1:4])
 
-# List methods
+# # List methods
+
+# t = ['a', 'b', 'c']
+# t.append('d')
+# print(t)
+
+# t = ['d', 'c', 'e', 'b', 'a']
+# t.sort()
+# print(t)
+
+#Deleting elements
 
 t = ['a', 'b', 'c']
-t.append('d')
-print(t)
+del t[1]
+print(t) # Output: ['a', 'c']
 
-t = ['d', 'c', 'e', 'b', 'a']
-t.sort()
-print(t)
+t = ['a', 'b', 'c']
+t.remove('b')
+print(t) # Output: ['a', 'c']
 
+t = ['a', 'b', 'c', 'd', 'e', 'f']
+del t[1:5]
+print(t) # Output: ['a', 'f']
+
+# Lists and strings
+
+s = 'spam'
+t = list(s)
+print(t) # Output: ['s', 'p', 'a', 'm']
+
+s = 'spam-spam-spam'
+delimiter = '-'
+t = s.split(delimiter)
+print(t) # Output: ['spam', 'spam', 'spam']
+
+# Objects and values
+
+a = 'banana'
+b = 'banana'
+print(a is b) # Output: True
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+print(a is b) # Output: False
