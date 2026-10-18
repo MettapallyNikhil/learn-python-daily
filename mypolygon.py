@@ -1181,37 +1181,62 @@
 # t.sort()
 # print(t)
 
-#Deleting elements
+# #Deleting elements
 
-t = ['a', 'b', 'c']
-del t[1]
-print(t) # Output: ['a', 'c']
+# t = ['a', 'b', 'c']
+# del t[1]
+# print(t) # Output: ['a', 'c']
 
-t = ['a', 'b', 'c']
-t.remove('b')
-print(t) # Output: ['a', 'c']
+# t = ['a', 'b', 'c']
+# t.remove('b')
+# print(t) # Output: ['a', 'c']
 
-t = ['a', 'b', 'c', 'd', 'e', 'f']
-del t[1:5]
-print(t) # Output: ['a', 'f']
+# t = ['a', 'b', 'c', 'd', 'e', 'f']
+# del t[1:5]
+# print(t) # Output: ['a', 'f']
 
-# Lists and strings
+# # Lists and strings
 
-s = 'spam'
-t = list(s)
-print(t) # Output: ['s', 'p', 'a', 'm']
+# s = 'spam'
+# t = list(s)
+# print(t) # Output: ['s', 'p', 'a', 'm']
 
-s = 'spam-spam-spam'
-delimiter = '-'
-t = s.split(delimiter)
-print(t) # Output: ['spam', 'spam', 'spam']
+# s = 'spam-spam-spam'
+# delimiter = '-'
+# t = s.split(delimiter)
+# print(t) # Output: ['spam', 'spam', 'spam']
 
-# Objects and values
+# # Objects and values
 
-a = 'banana'
-b = 'banana'
-print(a is b) # Output: True
+# a = 'banana'
+# b = 'banana'
+# print(a is b) # Output: True
+
+# a = [1, 2, 3]
+# b = [1, 2, 3]
+# print(a is b) # Output: False
+
+# Aliasing
 
 a = [1, 2, 3]
-b = [1, 2, 3]
-print(a is b) # Output: False
+b = a
+print(b is a)
+
+# Exercise 10.1. 
+
+# Write a function called nested_sum that takes a list of lists of integers and adds up
+# the elements from all of the nested lists.
+
+def nested_sum(t):
+    """Computes the total of all numbers in a list of lists.
+   
+    t: list of list of numbers
+
+    returns: number
+    """
+    total = 0
+    for nested in t:
+        total += sum(nested)
+    return total
+
+print(nested_sum([[1, 2, 3], [4, 5], [6]]))  # Output: 21
