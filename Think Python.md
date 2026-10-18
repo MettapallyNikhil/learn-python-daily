@@ -1493,3 +1493,28 @@ a = [1, 2, 3]
 b = [1, 2, 3]
 print(a is b) # Output: False
 ``````
+# Aliasing
+``````Python
+a = [1, 2, 3]
+b = a
+print(b is a)
+``````
+# Exercise 10.1. 
+
+Write a function called nested_sum that takes a list of lists of integers and adds up
+the elements from all of the nested lists.
+``````Python
+def nested_sum(t):
+    """Computes the total of all numbers in a list of lists.
+   
+    t: list of list of numbers
+
+    returns: number
+    """
+    total = 0
+    for nested in t:
+        total += sum(nested)
+    return total
+
+print(nested_sum([[1, 2, 3], [4, 5], [6]]))  # Output: 21
+``````
