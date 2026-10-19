@@ -1518,3 +1518,37 @@ def nested_sum(t):
 
 print(nested_sum([[1, 2, 3], [4, 5], [6]]))  # Output: 21
 ``````
+
+# Write a function called cumsum that takes a list of numbers and returns the cumulative sum; that is, a new list where the ith element is the sum of the first i + 1 elements from the original list. 
+``````Python
+def cumsum(t):
+    """Computes the cumulative sum of a list of numbers.
+
+    t: list of numbers
+
+    returns: list of cumulative sums
+    """
+    total = 0
+    result = []
+    for x in t:
+        total += x
+        result.append(total)
+    return result
+``````
+print(cumsum([1, 2, 3, 4]))  # Output: [1, 3, 6, 10]
+
+# Write a function called middle that takes a list and returns a new list that contains
+all but the first and last elements. 
+  
+``````Python
+def middle(t):
+    """Returns a new list that contains all but the first and last elements of the original list.
+
+    t: list
+
+    returns: new list
+    """
+    return t[1:-1]
+
+print(middle([1, 2, 3, 4]))  # Output: [2, 3]
+``````
