@@ -1280,13 +1280,29 @@
 
 # print(middle([1, 2, 3, 4]))  # Output: [2, 3]
 
-# Dictionaries
+# # Dictionaries
 
-eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
-print(eng2sp) 
-print(eng2sp['two'])  # Output: 'dos'
+# eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
+# print(eng2sp) 
+# print(eng2sp['two'])  # Output: 'dos'
 
-# Dictionary as a collection of counters
+# # Dictionary as a collection of counters
+
+# def histogram(s):
+#     d = dict()
+#     for c in s:
+#         if c not in d:
+#             d[c] = 1
+#         else:
+#             d[c] += 1
+#     return d
+
+# print(histogram('banana'))  # Output: {'b': 1, 'a': 3, 'n': 2}
+# print(histogram('mississippi'))  # Output: {'m': 1, 'i': 4, 's': 4, 'p': 2}
+# print(histogram('Nikhil'))  # Output: {'N': 1, 'i': 1, 'k': 1, 'h': 1, 'i': 1, 'l': 1}
+# print(histogram('Applied AI for Digital Prodcuction Management'))  # Output: {'A': 1, 'p': 2, 'l': 1, 'i': 2, 'e': 2, 'd': 2, ' ': 4, 'f': 1, 'o': 1, 'r': 1, 'D': 1, 'g': 1, 't': 2, 'a': 2, 'c': 1, 'u': 1, 'M': 1, 'n': 1}
+
+#  Looping and dictionaries
 
 def histogram(s):
     d = dict()
@@ -1297,7 +1313,23 @@ def histogram(s):
             d[c] += 1
     return d
 
-print(histogram('banana'))  # Output: {'b': 1, 'a': 3, 'n': 2}
-print(histogram('mississippi'))  # Output: {'m': 1, 'i': 4, 's': 4, 'p': 2}
-print(histogram('Nikhil'))  # Output: {'N': 1, 'i': 1, 'k': 1, 'h': 1, 'i': 1, 'l': 1}
-print(histogram('Applied AI for Digitail Prodcuction Management'))  # Output: {'A': 1, 'p': 2, 'l': 1, 'i': 2, 'e': 2, 'd': 2, ' ': 4, 'f': 1, 'o': 1, 'r': 1, 'D': 1, 'g': 1, 't': 2, 'a': 2, 'c': 1, 'u': 1, 'M': 1, 'n': 1}
+def print_hist(h):
+    for c in h:
+        print(c, h[c])
+
+h = histogram('parrot')
+print_hist(h)
+
+# Dictionaries and lists
+
+def invert_dict(d):
+    inverse = dict()
+    for key in d:
+        val = d[key]
+        if val not in inverse:
+            inverse[val] = [key]
+        else:
+            inverse[val].append(key)
+    return inverse
+
+print(invert_dict({'a': 1, 'b': 2, 'c': 1}))  # Output: {1: ['a', 'c'], 2: ['b']}
