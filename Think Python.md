@@ -1607,3 +1607,28 @@ def invert_dict(d):
 
 print(invert_dict({'a': 1, 'b': 2, 'c': 1}))  # Output: {1: ['a', 'c'], 2: ['b']}
 ``````
+
+# Memos
+``````Python
+known = {0: 0, 1: 1}
+def fibonacci(n):
+    if n in known:
+        return known[n]
+    res = fibonacci(n-1) + fibonacci(n-2)
+    known[n] = res
+    return res
+
+print(fibonacci(0))  # Output: 0
+print(fibonacci(1))  # Output: 1
+print(fibonacci(2))  # Output: 1
+print(fibonacci(3))  # Output: 2
+print(fibonacci(4))  # Output: 3
+print(fibonacci(5))  # Output: 5
+print(fibonacci(6))  # Output: 8
+print(fibonacci(7))  # Output: 13
+print(fibonacci(8))  # Output: 21
+print(fibonacci(9))  # Output: 34
+print(fibonacci(10))  # Output: 55
+print(fibonacci(50))  # Output: 12586269025
+print(fibonacci(100))  # Output: 354224848179261915075
+``````
