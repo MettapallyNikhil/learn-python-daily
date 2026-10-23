@@ -1302,34 +1302,57 @@
 # print(histogram('Nikhil'))  # Output: {'N': 1, 'i': 1, 'k': 1, 'h': 1, 'i': 1, 'l': 1}
 # print(histogram('Applied AI for Digital Prodcuction Management'))  # Output: {'A': 1, 'p': 2, 'l': 1, 'i': 2, 'e': 2, 'd': 2, ' ': 4, 'f': 1, 'o': 1, 'r': 1, 'D': 1, 'g': 1, 't': 2, 'a': 2, 'c': 1, 'u': 1, 'M': 1, 'n': 1}
 
-#  Looping and dictionaries
+# #  Looping and dictionaries
 
-def histogram(s):
-    d = dict()
-    for c in s:
-        if c not in d:
-            d[c] = 1
-        else:
-            d[c] += 1
-    return d
+# def histogram(s):
+#     d = dict()
+#     for c in s:
+#         if c not in d:
+#             d[c] = 1
+#         else:
+#             d[c] += 1
+#     return d
 
-def print_hist(h):
-    for c in h:
-        print(c, h[c])
+# def print_hist(h):
+#     for c in h:
+#         print(c, h[c])
 
-h = histogram('parrot')
-print_hist(h)
+# h = histogram('parrot')
+# print_hist(h)
 
-# Dictionaries and lists
+# # Dictionaries and lists
 
-def invert_dict(d):
-    inverse = dict()
-    for key in d:
-        val = d[key]
-        if val not in inverse:
-            inverse[val] = [key]
-        else:
-            inverse[val].append(key)
-    return inverse
+# def invert_dict(d):
+#     inverse = dict()
+#     for key in d:
+#         val = d[key]
+#         if val not in inverse:
+#             inverse[val] = [key]
+#         else:
+#             inverse[val].append(key)
+#     return inverse
 
-print(invert_dict({'a': 1, 'b': 2, 'c': 1}))  # Output: {1: ['a', 'c'], 2: ['b']}
+# print(invert_dict({'a': 1, 'b': 2, 'c': 1}))  # Output: {1: ['a', 'c'], 2: ['b']}
+
+# Memos
+known = {0: 0, 1: 1}
+def fibonacci(n):
+    if n in known:
+        return known[n]
+    res = fibonacci(n-1) + fibonacci(n-2)
+    known[n] = res
+    return res
+
+print(fibonacci(0))  # Output: 0
+print(fibonacci(1))  # Output: 1
+print(fibonacci(2))  # Output: 1
+print(fibonacci(3))  # Output: 2
+print(fibonacci(4))  # Output: 3
+print(fibonacci(5))  # Output: 5
+print(fibonacci(6))  # Output: 8
+print(fibonacci(7))  # Output: 13
+print(fibonacci(8))  # Output: 21
+print(fibonacci(9))  # Output: 34
+print(fibonacci(10))  # Output: 55
+print(fibonacci(50))  # Output: 12586269025
+print(fibonacci(100))  # Output: 354224848179261915075
