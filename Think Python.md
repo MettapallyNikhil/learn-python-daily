@@ -1632,3 +1632,47 @@ print(fibonacci(10))  # Output: 55
 print(fibonacci(50))  # Output: 12586269025
 print(fibonacci(100))  # Output: 354224848179261915075
 ``````
+
+# Tuples
+``````Python
+t1 = 'a',
+print(type(t1))
+
+t1 = ('a')
+print(type(t1))
+
+t = tuple('Nikhil') 
+print(t)  # Output: ('N', 'i', 'k', 'h', 'i', 'l')
+``````
+# Tuple assignment
+``````Python
+a = 1
+b = a
+print(a, b)  # Output: 1 1
+``````
+# Exercise 
+Write a function called most_frequent that takes a string and prints the letters in decreasing order of frequency. 
+Find text samples from several different languages and see
+how letter frequency varies between languages. 
+``````Python
+def most_frequent(s):
+    """Prints the letters in the string s in decreasing order of frequency."""
+    d = dict()
+    for c in s:
+        if c.isalpha():  # Consider only alphabetic characters
+            c = c.lower()  # Convert to lowercase for uniformity
+            if c not in d:
+                d[c] = 1
+            else:
+                d[c] += 1
+
+    # Sort the dictionary by frequency in decreasing order
+    sorted_letters = sorted(d.items(), key=lambda item: item[1], reverse=True)
+
+    for letter, frequency in sorted_letters:
+        print(f"{letter}: {frequency}")
+
+# Example usage:
+text_sample = "Nikhil"
+most_frequent(text_sample)
+``````
