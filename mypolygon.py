@@ -1334,25 +1334,66 @@
 
 # print(invert_dict({'a': 1, 'b': 2, 'c': 1}))  # Output: {1: ['a', 'c'], 2: ['b']}
 
-# Memos
-known = {0: 0, 1: 1}
-def fibonacci(n):
-    if n in known:
-        return known[n]
-    res = fibonacci(n-1) + fibonacci(n-2)
-    known[n] = res
-    return res
+# # Memos
+# known = {0: 0, 1: 1}
+# def fibonacci(n):
+#     if n in known:
+#         return known[n]
+#     res = fibonacci(n-1) + fibonacci(n-2)
+#     known[n] = res
+#     return res
 
-print(fibonacci(0))  # Output: 0
-print(fibonacci(1))  # Output: 1
-print(fibonacci(2))  # Output: 1
-print(fibonacci(3))  # Output: 2
-print(fibonacci(4))  # Output: 3
-print(fibonacci(5))  # Output: 5
-print(fibonacci(6))  # Output: 8
-print(fibonacci(7))  # Output: 13
-print(fibonacci(8))  # Output: 21
-print(fibonacci(9))  # Output: 34
-print(fibonacci(10))  # Output: 55
-print(fibonacci(50))  # Output: 12586269025
-print(fibonacci(100))  # Output: 354224848179261915075
+# print(fibonacci(0))  # Output: 0
+# print(fibonacci(1))  # Output: 1
+# print(fibonacci(2))  # Output: 1
+# print(fibonacci(3))  # Output: 2
+# print(fibonacci(4))  # Output: 3
+# print(fibonacci(5))  # Output: 5
+# print(fibonacci(6))  # Output: 8
+# print(fibonacci(7))  # Output: 13
+# print(fibonacci(8))  # Output: 21
+# print(fibonacci(9))  # Output: 34
+# print(fibonacci(10))  # Output: 55
+# print(fibonacci(50))  # Output: 12586269025
+# print(fibonacci(100))  # Output: 354224848179261915075
+
+# Tuples
+t1 = 'a',
+print(type(t1))
+
+t1 = ('a')
+print(type(t1))
+
+t = tuple('Nikhil') 
+print(t)  # Output: ('N', 'i', 'k', 'h', 'i', 'l')
+
+# Tuple assignment
+
+a = 1
+b = a
+print(a, b)  # Output: 1 1
+
+# Write a function called most_frequent that takes a string and prints the letters in decreasing order of frequency. 
+# Find text samples from several different languages and see
+# how letter frequency varies between languages. 
+
+def most_frequent(s):
+    """Prints the letters in the string s in decreasing order of frequency."""
+    d = dict()
+    for c in s:
+        if c.isalpha():  # Consider only alphabetic characters
+            c = c.lower()  # Convert to lowercase for uniformity
+            if c not in d:
+                d[c] = 1
+            else:
+                d[c] += 1
+
+    # Sort the dictionary by frequency in decreasing order
+    sorted_letters = sorted(d.items(), key=lambda item: item[1], reverse=True)
+
+    for letter, frequency in sorted_letters:
+        print(f"{letter}: {frequency}")
+
+# Example usage:
+text_sample = "Nikhil"
+most_frequent(text_sample)
