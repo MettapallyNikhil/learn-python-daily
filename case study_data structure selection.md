@@ -31,3 +31,41 @@ if __name__ == "__main__":
     file_path = 'C:\\Users\\Hp\\PythonLearning\\words.txt'  # Replace with your file path
     count_word_frequency(file_path)
 `````
+
+Modify your program from the previous exercise to read the book you downloaded, skip over the
+header information at the beginning of the file, and process the rest of the words as before.
+
+`````Python
+from collections import Counter
+
+def count_word_frequency(file_path):
+    word_count = Counter()
+    total_words = 0
+
+    with open(file_path, "r", encoding="utf-8") as file:
+        # Skip the header
+        for line in file:
+            if line.strip().startswith("*** START OF"):
+                break
+        else:
+            print("Start marker not found in the file.")
+            return
+
+        # Count words after the header
+        for line in file:
+            words = line.lower().split()
+            word_count.update(words)
+            total_words += len(words)
+
+    print(f"Total number of words: {total_words}")
+    print("Top 10 most frequent words:")
+
+    for word, count in word_count.most_common(10):
+        print(f"{word}: {count}")
+
+
+if __name__ == "__main__":
+    file_path = r"C:\Users\Hp\PythonLearning\Sherlock holmes.txt"
+    count_word_frequency(file_path)
+
+`````
