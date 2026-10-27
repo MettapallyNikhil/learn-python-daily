@@ -69,3 +69,37 @@ if __name__ == "__main__":
     count_word_frequency(file_path)
 
 `````
+
+# Random numbers
+`````Python
+import random
+for i in range(10):
+    x = random.random()
+
+print(x)
+`````
+`````Python
+t = [1, 2, 3, 4, 5]
+random.shuffle(t)
+
+print(t)
+`````
+
+Write a function named choose_from_hist that takes a histogram as defined in
+Section 11.2 and returns a random value from the histogram, chosen with probability in proportion
+to frequency. 
+`````Python
+def choose_from_hist(hist):
+    total = sum(hist.values())
+    rand_val = random.uniform(0, total)
+    cumulative = 0
+
+    for key, freq in hist.items():
+        cumulative += freq
+        if rand_val < cumulative:
+            return key
+
+# Example usage
+print(choose_from_hist({'a': 5, 'b': 2, 'c': 3}))
+print(choose_from_hist({'apple': 10, 'banana': 5, 'cherry': 15}))
+`````
