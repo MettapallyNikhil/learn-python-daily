@@ -103,3 +103,25 @@ def choose_from_hist(hist):
 print(choose_from_hist({'a': 5, 'b': 2, 'c': 3}))
 print(choose_from_hist({'apple': 10, 'banana': 5, 'cherry': 15}))
 `````
+#  Word histogram
+`````Python
+import string
+
+def process_file(filename):
+    hist = {}
+    with open(filename, 'r', encoding='utf-8') as fp:
+        for line in fp:
+            process_line(line, hist)
+    return hist
+
+def process_line(line, hist):
+    line = line.replace('-', ' ')
+    for word in line.split():
+        word = word.strip(string.punctuation + string.whitespace)
+        word = word.lower()
+        if word:  # Skip empty strings
+            hist[word] = hist.get(word, 0) + 1
+
+hist = process_file('Sherlock holmes.txt')
+print(hist)
+`````
