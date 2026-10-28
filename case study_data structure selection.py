@@ -65,33 +65,55 @@
 #     file_path = r"C:\Users\Hp\PythonLearning\Sherlock holmes.txt"
 #     count_word_frequency(file_path)
 
-# Random numbers
+# # Random numbers
 
-import random
-for i in range(10):
-    x = random.random()
+# import random
+# for i in range(10):
+#     x = random.random()
 
-print(x)
+# print(x)
 
-t = [1, 2, 3, 4, 5]
-random.shuffle(t)
+# t = [1, 2, 3, 4, 5]
+# random.shuffle(t)
 
-print(t)
+# print(t)
 
-# Write a function named choose_from_hist that takes a histogram as defined in
-# Section 11.2 and returns a random value from the histogram, chosen with probability in proportion
-# to frequency. 
+# # Write a function named choose_from_hist that takes a histogram as defined in
+# # Section 11.2 and returns a random value from the histogram, chosen with probability in proportion
+# # to frequency. 
 
-def choose_from_hist(hist):
-    total = sum(hist.values())
-    rand_val = random.uniform(0, total)
-    cumulative = 0
+# def choose_from_hist(hist):
+#     total = sum(hist.values())
+#     rand_val = random.uniform(0, total)
+#     cumulative = 0
 
-    for key, freq in hist.items():
-        cumulative += freq
-        if rand_val < cumulative:
-            return key
+#     for key, freq in hist.items():
+#         cumulative += freq
+#         if rand_val < cumulative:
+#             return key
 
-# Example usage
-print(choose_from_hist({'a': 5, 'b': 2, 'c': 3}))
-print(choose_from_hist({'apple': 10, 'banana': 5, 'cherry': 15}))
+# # Example usage
+# print(choose_from_hist({'a': 5, 'b': 2, 'c': 3}))
+# print(choose_from_hist({'apple': 10, 'banana': 5, 'cherry': 15}))
+
+#  Word histogram
+
+import string
+
+def process_file(filename):
+    hist = {}
+    with open(filename, 'r', encoding='utf-8') as fp:
+        for line in fp:
+            process_line(line, hist)
+    return hist
+
+def process_line(line, hist):
+    line = line.replace('-', ' ')
+    for word in line.split():
+        word = word.strip(string.punctuation + string.whitespace)
+        word = word.lower()
+        if word:  # Skip empty strings
+            hist[word] = hist.get(word, 0) + 1
+
+hist = process_file('Sherlock holmes.txt')
+print(hist)
