@@ -98,22 +98,81 @@
 
 #  Word histogram
 
+# import string
+
+# def process_file(filename):
+#     hist = {}
+#     with open(filename, 'r', encoding='utf-8') as fp:
+#         for line in fp:
+#             process_line(line, hist)
+#     return hist
+
+# def process_line(line, hist):
+#     line = line.replace('-', ' ')
+#     for word in line.split():
+#         word = word.strip(string.punctuation + string.whitespace)
+#         word = word.lower()
+#         if word:  # Skip empty strings
+#             hist[word] = hist.get(word, 0) + 1
+
+# hist = process_file('Sherlock holmes.txt')
+# print(hist)
+
+# Most common words
+
+
 import string
+
 
 def process_file(filename):
     hist = {}
+
     with open(filename, 'r', encoding='utf-8') as fp:
         for line in fp:
             process_line(line, hist)
+
     return hist
+
 
 def process_line(line, hist):
     line = line.replace('-', ' ')
+
     for word in line.split():
         word = word.strip(string.punctuation + string.whitespace)
         word = word.lower()
-        if word:  # Skip empty strings
+
+        if word:
             hist[word] = hist.get(word, 0) + 1
 
+
+def most_common(hist, excluding_stopwords=False):
+    stopwords = {
+        'the', 'and', 'to', 'of', 'a', 'in', 'that', 'is', 'it', 'for',
+        'on', 'with', 'as', 'was', 'at', 'by', 'an', 'be', 'this', 'which',
+        'or', 'from', 'but', 'not', 'are', 'have', 'has'
+    }
+
+    if excluding_stopwords:
+        filtered_hist = {
+            word: count
+            for word, count in hist.items()
+            if word not in stopwords
+        }
+    else:
+        filtered_hist = hist
+
+    return sorted(
+        filtered_hist.items(),
+        key=lambda item: item[1],
+        reverse=True
+    )[:10]
+
+
+# Execute the program
 hist = process_file('Sherlock holmes.txt')
-print(hist)
+
+print("Top 10 words excluding stopwords:")
+print(most_common(hist, excluding_stopwords=True))
+
+print("\nTop 10 words including stopwords:")
+print(most_common(hist, excluding_stopwords=False))
