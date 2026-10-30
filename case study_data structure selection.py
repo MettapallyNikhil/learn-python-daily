@@ -118,16 +118,88 @@
 # hist = process_file('Sherlock holmes.txt')
 # print(hist)
 
-# Most common words
+# # Most common words
 
 
+# import string
+
+
+# def process_file(filename):
+#     hist = {}
+
+#     with open(filename, 'r', encoding='utf-8') as fp:
+#         for line in fp:
+#             process_line(line, hist)
+
+#     return hist
+
+
+# def process_line(line, hist):
+#     line = line.replace('-', ' ')
+
+#     for word in line.split():
+#         word = word.strip(string.punctuation + string.whitespace)
+#         word = word.lower()
+
+#         if word:
+#             hist[word] = hist.get(word, 0) + 1
+
+
+# def most_common(hist, excluding_stopwords=False):
+#     stopwords = {
+#         'the', 'and', 'to', 'of', 'a', 'in', 'that', 'is', 'it', 'for',
+#         'on', 'with', 'as', 'was', 'at', 'by', 'an', 'be', 'this', 'which',
+#         'or', 'from', 'but', 'not', 'are', 'have', 'has'
+#     }
+
+#     if excluding_stopwords:
+#         filtered_hist = {
+#             word: count
+#             for word, count in hist.items()
+#             if word not in stopwords
+#         }
+#     else:
+#         filtered_hist = hist
+
+#     return sorted(
+#         filtered_hist.items(),
+#         key=lambda item: item[1],
+#         reverse=True
+#     )[:10]
+
+
+# # Execute the program
+# hist = process_file('Sherlock holmes.txt')
+
+# print("Top 10 words excluding stopwords:")
+# print(most_common(hist, excluding_stopwords=True))
+
+# print("\nTop 10 words including stopwords:")
+# print(most_common(hist, excluding_stopwords=False))
+
+# Random words
+
+# Write a program that uses this algorithm to choose a random word from the book.
+
+from __future__ import print_function, division
+
+import random
 import string
+from bisect import bisect
 
 
-def process_file(filename):
+def process_file(filename, skip_header=False):
+    """Read a text file and create a word histogram."""
+
     hist = {}
 
     with open(filename, 'r', encoding='utf-8') as fp:
+
+        if skip_header:
+            for line in fp:
+                if line.strip() == "*** START OF THE PROJECT GUTENBERG EBOOK":
+                    break
+
         for line in fp:
             process_line(line, hist)
 
@@ -135,6 +207,8 @@ def process_file(filename):
 
 
 def process_line(line, hist):
+    """Process a line and update the word histogram."""
+
     line = line.replace('-', ' ')
 
     for word in line.split():
@@ -145,34 +219,38 @@ def process_line(line, hist):
             hist[word] = hist.get(word, 0) + 1
 
 
-def most_common(hist, excluding_stopwords=False):
-    stopwords = {
-        'the', 'and', 'to', 'of', 'a', 'in', 'that', 'is', 'it', 'for',
-        'on', 'with', 'as', 'was', 'at', 'by', 'an', 'be', 'this', 'which',
-        'or', 'from', 'but', 'not', 'are', 'have', 'has'
-    }
+def random_word(hist):
+    """Choose a random word based on its frequency."""
 
-    if excluding_stopwords:
-        filtered_hist = {
-            word: count
-            for word, count in hist.items()
-            if word not in stopwords
-        }
-    else:
-        filtered_hist = hist
+    words = []
+    freqs = []
+    total_freq = 0
 
-    return sorted(
-        filtered_hist.items(),
-        key=lambda item: item[1],
-        reverse=True
-    )[:10]
+    # Build cumulative frequency list
+    for word, freq in hist.items():
+        total_freq += freq
+        words.append(word)
+        freqs.append(total_freq)
+
+    # Choose a random position
+    x = random.randint(0, total_freq - 1)
+
+    # Find the corresponding word
+    index = bisect(freqs, x)
+
+    return words[index]
 
 
-# Execute the program
-hist = process_file('Sherlock holmes.txt')
+def main():
+    hist = process_file('Sherlock holmes.txt')
 
-print("Top 10 words excluding stopwords:")
-print(most_common(hist, excluding_stopwords=True))
+    print("Total unique words:", len(hist))
 
-print("\nTop 10 words including stopwords:")
-print(most_common(hist, excluding_stopwords=False))
+    print("\nHere are some random words from the book:\n")
+
+    for i in range(100):
+        print(random_word(hist), end=' ')
+
+
+if __name__ == '__main__':
+    main()
