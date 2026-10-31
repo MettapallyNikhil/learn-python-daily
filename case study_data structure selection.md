@@ -264,3 +264,45 @@ def main():
 if __name__ == '__main__':
     main()
 `````
+# Markov analysis
+
+Write a program to read a text from a file and perform Markov analysis. The result should be
+a dictionary that maps from prefixes to a collection of possible suffixes. The collection might
+be a list, tuple, or dictionary; it is up to you to make an appropriate choice. You can test your
+program with prefix length two, but you should write the program in a way that makes it easy
+to try other lengths.
+`````Python
+import string
+
+
+def process_file(filename, prefix_length=2):
+    """Read a text file and create a Markov model based on prefixes and suffixes."""
+
+    markov_model = {}
+
+    with open(filename, 'r', encoding='utf-8') as fp:
+        words = []
+
+        for line in fp:
+            line = line.replace('-', ' ')
+            for word in line.split():
+                word = word.strip(string.punctuation + string.whitespace)
+                word = word.lower()
+                if word:
+                    words.append(word)  
+
+    # Build the Markov model
+    for i in range(len(words) - prefix_length):
+        prefix = tuple(words[i:i + prefix_length])
+        suffix = words[i + prefix_length]
+        if prefix not in markov_model:
+            markov_model[prefix] = []
+        markov_model[prefix].append(suffix)
+
+    return markov_model
+
+print("Markov model created. Here are some sample prefixes and their possible suffixes:\n")
+markov_model = process_file('Sherlock holmes.txt', prefix_length=2) 
+for prefix, suffixes in list(markov_model.items())[:10]:
+    print(f"{prefix}: {suffixes}")
+`````
